@@ -7,9 +7,9 @@
 
 @font-face {
     font-family: 'Afacad';
-    src: url('../assets/fonts/afacad-regular.woff2') format('woff2'),
-         url('../assets/fonts/afacad-regular.woff') format('woff'),
-         url('../assets/fonts/afacad-regular.ttf') format('truetype');
+    src: url('../assets/fonts/Afacad-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Afacad-Regular.woff') format('woff'),
+         url('../assets/fonts/Afacad-Regular.ttf') format('truetype');
 }
 
 html {
@@ -41,7 +41,7 @@ button:hover {
 
 body {
     min-height: 100%;
-    font-family: 'Afacad';
+    font-family: 'Afacad', sans-serif;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
