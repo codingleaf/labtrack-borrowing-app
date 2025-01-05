@@ -1,0 +1,103 @@
+#app-logo {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0rem 0.5rem;
+}
+
+#app-title {
+    margin: 0rem 0.5rem;
+    font-size: 2rem;
+}
+
+#btn-back-link {
+    align-self: flex-start;
+}
+
+#btn-back {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.top > h1 {
+    font-size: 1.8rem;
+}
+
+header {
+    background-color: var(--secondary);
+    padding: 1rem;
+    width: 100%;
+}
+
+main {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    border-radius: 3rem 0 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 30rem;
+    flex: 1;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+label {
+    color: #808080;
+    background-color: var(--white);
+    align-self: flex-start;
+    padding: 0 0.3rem;
+    position: absolute;
+    top: -0.59rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+
+}
+
+input {
+    background-color: transparent;
+    padding: 0.3rem 1rem;
+    border: 2px solid #808080;
+    border-radius: 0.5rem;
+}
+
+#btn-next-link {
+    align-self: flex-end;
+}
+
+#btn-next {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+#btn-next:hover,
+#btn-next:active {
+    color: var(--white);
+    background-color: var(--primary);
+}

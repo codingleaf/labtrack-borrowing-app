@@ -12,6 +12,10 @@
          url('../assets/fonts/afacad-regular.ttf') format('truetype');
 }
 
+html {
+    height: 100%;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -31,14 +35,22 @@ ol > li {
     list-style-position: inside;
 }
 
+button:hover {
+    cursor:pointer;
+}
+
 body {
+    min-height: 100%;
     font-family: 'Afacad';
     background-color: var(--bg);
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+}
+
+header {
+    margin-bottom: auto;
 }
 
 main {
@@ -46,6 +58,11 @@ main {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: auto;
 }
 
 section {
