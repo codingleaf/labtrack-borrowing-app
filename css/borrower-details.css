@@ -32,7 +32,7 @@ main {
     align-self: flex-start;
 }
 
-.top {
+#top {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -41,7 +41,7 @@ main {
     text-align: center;
 }
 
-.top > h1 {
+#top > h1 {
     font-size: 1.8rem;
 }
 
