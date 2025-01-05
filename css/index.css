@@ -1,0 +1,95 @@
+#app-logo {
+    max-width: 8rem;
+    max-height: 8rem;
+    margin: 0rem 0.5rem;
+}
+
+#app-title {
+    margin: 0rem 0.5rem;
+    font-size: 4rem;
+}
+
+#hero, #how-it-works {
+    width: 100%;
+}
+
+section > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+section > div > img {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+button {
+    background-color: transparent;
+    border: 0.1rem solid var(--primary);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+button:active {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+p {
+    color: var(--primary)
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2 > span {
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+ol > li {
+    font-weight: bold;
+    color: var(--primary)
+}
+
+ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+ul > li {
+    text-align: justify;
+    font-weight: lighter;
+    color: var(--primary)
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(247, 247, 247, 30%);
+    border-radius: 2rem;
+    text-align: center;
+}
+
+footer > img {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0rem 0.5rem;
+}
+
+footer > p {
+    margin: 0rem 0.5rem;
+}
