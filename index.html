@@ -31,7 +31,7 @@
             </div>
         </section>
 
-        <a href="/pages/borrower-details.html"><button>Start Borrowing</button></a>
+        <button id="btn-start-borrowing">Start Borrowing</button>
 
         <section id="how-it-works">
             <h2>How it Works<br/><span>Borrow Equipment in 3 Simple Steps</span></h2>
@@ -61,5 +61,11 @@
         <img src="/assets/icons/icon-bu-polangui.png" alt="bu polangui logo">
         <p>Bicol University Polangui Natural Science Laboratory</p>
     </footer>
+
+    <script>
+        document.querySelector('#btn-start-borrowing').addEventListener('click', ()=>{
+            window.location.href='/pages/borrower-details.html';
+        })
+    </script>
 </body>
 </html>

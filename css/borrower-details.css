@@ -1,3 +1,9 @@
+header {
+    background-color: var(--secondary);
+    padding: 1rem;
+    width: 100%;
+}
+
 #app-logo {
     max-width: 3rem;
     max-height: 3rem;
@@ -9,8 +15,12 @@
     font-size: 2rem;
 }
 
-#btn-back-link {
-    align-self: flex-start;
+main {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    border-radius: 3rem 0 0 0;
 }
 
 #btn-back {
@@ -19,6 +29,7 @@
     font-size: 2rem;
     background-color: transparent;
     border: none;
+    align-self: flex-start;
 }
 
 .top {
@@ -32,20 +43,6 @@
 
 .top > h1 {
     font-size: 1.8rem;
-}
-
-header {
-    background-color: var(--secondary);
-    padding: 1rem;
-    width: 100%;
-}
-
-main {
-    background-color: var(--white);
-    width: 100%;
-    height: 100%;
-    padding: 1rem 2rem;
-    border-radius: 3rem 0 0 0;
 }
 
 form {
@@ -84,16 +81,13 @@ input {
     border-radius: 0.5rem;
 }
 
-#btn-next-link {
-    align-self: flex-end;
-}
-
 #btn-next {
     background-color: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
     border-radius: 2rem;
     padding: 0.5rem 2rem;
+    align-self: flex-end;
 }
 
 #btn-next:hover,
