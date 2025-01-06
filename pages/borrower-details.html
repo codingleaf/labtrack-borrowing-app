@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/borrower-details.css">
+
+    <!-- scripts -->
+    <script type="module" src="../js/borrower-details.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,7 +23,7 @@
     </header>
     <main>
         <div id="top">
-            <a href="../index.html" id="btn-back-link"><button id="btn-back">&lt;</button></a>
+            <button id="btn-back">&lt;</button>
             <h1>Borrower Details</h1>
             <div></div>
         </div>
@@ -45,14 +48,5 @@
         </form>
         <p>1/2</p>
     </main>
-    
-    <script>
-        document.querySelector('#btn-back').addEventListener('click', ()=>{
-            window.location.href='../index.html';
-        })
-        document.querySelector('#btn-next').addEventListener('click', ()=>{
-            window.location.href='./equipment-selection.html';
-        })
-    </script>
 </body>
 </html>
