@@ -64,12 +64,3 @@ main {
 footer {
     margin-top: auto;
 }
-
-section {
-    background-color: var(--white);
-    border-radius: 1rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
