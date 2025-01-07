@@ -132,6 +132,8 @@ main {
 
 .equipment-card > img {
     height: 60%;
+    object-fit: contain;
+    width: auto;
     border-radius: 1rem;
 }
 
@@ -142,4 +144,8 @@ main {
     background-color: var(--primary);
     color: var(--white);
     font-size: 1rem;
+}
+
+.equipment-card.hidden {
+    display: none;
 }
