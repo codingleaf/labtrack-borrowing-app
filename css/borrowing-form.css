@@ -217,8 +217,23 @@ input {
 }
 
 /** Table **/
+table div {
+    margin: 0 auto;
+}
+
 table img {
     margin: 0 auto;
+    width: 6rem; 
+    height: 5rem; 
+    object-fit: contain;
+}
+
+button.cancel {
+    width: 2rem; 
+    height: 2rem; 
+    border-radius: 4rem; 
+    background-color: transparent; 
+    border: none;
 }
 
 thead {
@@ -230,17 +245,22 @@ thead {
 }
 
 th, td {
-    border-bottom: 1px solid #CCCCCC;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+
+td {
+    border-top: 1px solid #CCCCCC;
 }
 
 .table-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    overflow-y: auto;
+    overflow: auto;
     padding: 0 1rem 0.5rem 0.5rem;
     border-bottom: 1px dotted #808080;
+    flex-grow: 1;
 }
 
 #borrowing-list-table {
@@ -249,6 +269,7 @@ th, td {
     text-align: center;
     overflow-y: auto;
     border-collapse: collapse;
+    padding: 0.5rem;
 }
 
 #btn-confirm {
@@ -257,7 +278,51 @@ th, td {
     border: none;
     background-color: #217A34;
     color: var(--white);
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+input[type="number"]{
+    width: 100%;
+    text-align: center;
+    appearance: textfield;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#number-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1.5rem;
+    border-radius: 1rem;
+}
+
+button.plus,
+button.minus {
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: bold;
+    border-radius: 1rem;
+    width: 1.5rem; 
+    height: 1.5rem; 
+    font-size: 0.7rem;
+    background-color: transparent; 
+}
+
+button.plus:hover,
+button.plus:active,
+button.minus:hover,
+button.minus:active {
+    background-color: var(--primary);
+    color: var(--white);
 }
 /*****/
