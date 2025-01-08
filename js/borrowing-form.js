@@ -71,12 +71,49 @@ function searchFilter() {
     });
 }
 
+function previousPage(pages, currentPageIndex) {
+    const previousPageIndex = currentPageIndex - 1;
+    if (previousPageIndex >= 0) {
+        pages
+            .filter(page => page !== pages[previousPageIndex])
+            .forEach(page => page.classList.add('hidden'));
+        pages[previousPageIndex].classList.remove('hidden');
+    }
+    else {
+        window.location.href = '../index.html';
+    }
+}
+
+function nextPage(pages, currentPageIndex) {
+    const nextPageIndex = currentPageIndex + 1;
+    if (nextPageIndex >= 0 && nextPageIndex < pages.length) {
+        pages
+            .filter(page => page !== pages[nextPageIndex])
+            .forEach(page => page.classList.add('hidden'));
+        pages[nextPageIndex].classList.remove('hidden');
+    }
+}
+
 // Load equipment on page load
 document.addEventListener('DOMContentLoaded', () => {
-    let btnBack = document.querySelector('#btn-back');
-        btnBack.addEventListener('click', ()=>{
-            redirectTo('./borrower-details.html');
-    });
+    const pages = [...document.querySelectorAll('.page')];
+    pages.forEach((page, index) => {
+        const btnBack = page.querySelector('.btn-back')
+        if (btnBack) {
+            btnBack.addEventListener('click', () => {
+                previousPage(pages, index);
+            })
+        }
+    })
+
+    pages.forEach((page, index) => {
+        const btnNext = page.querySelector('.btn-next')
+        if (btnNext) {
+            btnNext.addEventListener('click', () => {
+                nextPage(pages, index);
+            })
+        }
+    })
 
     loadEquipment();
 });
