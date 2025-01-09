@@ -1,3 +1,5 @@
+'use strict';
+
 export function validateForm() {
     // Clear all previous errors
     document.querySelectorAll('.error-message').forEach(error => error.classList.remove('error-visible'));
@@ -44,8 +46,8 @@ export function validateForm() {
     }
 
     // Contact Number Validation
-    const contactNo = document.getElementById('contact-no').value.trim();
-    const contactNoError = document.getElementById('contact-no-error');
+    const contactNo = document.getElementById('contact-number').value.trim();
+    const contactNoError = document.getElementById('contact-number-error');
     if (!contactNo) {
         contactNoError.textContent = "Contact number is required.";
         contactNoError.classList.add('error-visible');

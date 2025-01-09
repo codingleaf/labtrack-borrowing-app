@@ -238,11 +238,15 @@ table img {
 }
 
 button.delete {
-    width: 2rem; 
-    height: 2rem; 
     border-radius: 4rem; 
     background-color: transparent; 
     border: none;
+    padding: 0;
+}
+
+button.delete > img {
+    height: 2rem;
+    width: 2rem;
 }
 
 thead {

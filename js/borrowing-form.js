@@ -2,9 +2,13 @@
 
 import { Spinbox } from './spinbox.js'
 import { validateForm } from './borrower-details-validation.js'
+import { showSummary } from './show-summary.js';
 
 // Timeout
 let timeoutID;
+
+// Borrowing List
+let borrowingList = [];
 
 // Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
@@ -19,9 +23,6 @@ async function loadEquipment() {
 
     // Reference to notification popup
     const notification = document.querySelector('.notification');
-
-    // Borrowing List
-    let borrowingList = [];
 
     try {
         // Fetch equipment data from equipment.json
@@ -87,14 +88,19 @@ async function loadEquipment() {
 
                 // unhide new row
                 newRow.classList.remove('hidden');
+
+                // add class to each row
+                newRow.classList.add('borrowing-list-row')
                 
                 // append new row
                 tableBody.appendChild(newRow);
 
-                borrowingList.push(equipment['name']);
+                // add equipment to borrowing list
+                borrowingList.push({ name: equipment['name'],
+                                     quantity: 1 });
 
+                // notification
                 notification.textContent = `ADDED ${equipment['name']}`;
-
                 showNotification();
 
                 console.log(`ADDED ${equipment['name']}`);
@@ -200,12 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     });
     
+    // Validate Borrower Details Form
     const btnValidateForm = document.querySelector('#btn-validate-form');
     btnValidateForm.addEventListener('click', () => {
         const proceed = validateForm();
         if (proceed) {
             nextPage(pages, 0);
         }
+    })
+
+    // Confirm Borrowing List (Show Summary)
+    const btnConfirm = document.querySelector('#btn-confirm');
+    btnConfirm.addEventListener('click', () => {
+        showSummary(borrowingList);
     })
     
     loadEquipment();

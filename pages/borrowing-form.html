@@ -22,7 +22,7 @@
         <h1 id="app-title">LabTrack</h1>
     </header>
     <main>
-        <div id="borrower-details-container" class="page">
+        <div id="borrower-details-container" class="page hidden">
             <div id="top">
                 <div></div>
                 <h1>Borrower Details</h1>
@@ -49,8 +49,8 @@
                 
                 <div class="field">
                     <label>Contact No.</label>
-                    <input type="text" id="contact-no" placeholder="e.g. 09123456789" novalidate>
-                    <span class="error-message" id="contact-no-error"></span>
+                    <input type="text" id="contact-number" placeholder="e.g. 09123456789" novalidate>
+                    <span class="error-message" id="contact-number-error"></span>
                 </div>
                 <button id="btn-validate-form">Next</button>
             </form>
@@ -83,7 +83,7 @@
             <p>2/2</p>
         </div>
 
-        <div id="borrowing-list-container" class="page hidden">
+        <div id="borrowing-list-container" class="page">
             <div id="top">
                 <button id="btn-back-bl" class="btn-back">&lt;</button>
                 <h1>Borrowing List</h1>
@@ -114,12 +114,12 @@
                                     <button class="spinbox-decrement">-</button>
                                 </div>
                             </td>
-                            <td><button type="button" class="delete"><img src="../assets/icons/icon-cancel.png"></button></td>
+                            <td><button type="button" class="delete"><img src="../assets/icons/icon-x.png"></button></td>
                          </tr>
                     </tbody>
                 </table>
             </div>
-            <button id="btn-confirm">Confirm & Generate QR</button>
+            <button id="btn-confirm">Confirm</button>
         </div>
     </main>
 </body>
