@@ -14,6 +14,35 @@ export class Spinbox {
         this.incrementButton.addEventListener('click', () => this.changeValue(1));
         this.decrementButton.addEventListener('click', () => this.changeValue(-1));
  
+        let intervalId;
+
+        // For holding the button for rapid increment
+        this.incrementButton.addEventListener('mousedown', () => {
+            intervalId = setInterval(() => {
+                this.changeValue(1);  // Increase value by 1
+            }, 100);  // Adjust the speed (in milliseconds)
+        });
+
+        // For holding the button for rapid decrement
+        this.decrementButton.addEventListener('mousedown', () => {
+            intervalId = setInterval(() => {
+                this.changeValue(-1);  // Decrease value by 1
+            }, 100);  // Adjust the speed (in milliseconds)
+        });
+
+        // Stop rapid change when the button is released
+        document.addEventListener('mouseup', () => {
+            clearInterval(intervalId);
+        });
+
+        // Stop rapid change if the mouse leaves the button
+        this.incrementButton.addEventListener('mouseleave', () => {
+            clearInterval(intervalId);
+        });
+        this.decrementButton.addEventListener('mouseleave', () => {
+            clearInterval(intervalId);
+        });
+
         this.input.addEventListener('input', () => this.validateValue());
 
         this.input.addEventListener('blur', () => {

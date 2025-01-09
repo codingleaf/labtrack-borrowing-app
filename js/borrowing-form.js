@@ -7,6 +7,15 @@ async function loadEquipment() {
     // Reference to the equipment container
     const equipmentContainer = document.querySelector('#equipment-container');
 
+    // Reference to the hidden row template for the borrowing list
+    const rowTemplate = document.querySelector('#row-template');
+
+    // Reference to the borrowing list table
+    const tableBody = document.querySelector('#borrowing-list-table > tbody');
+
+    // Borrowing List
+    let borrowingList = [];
+
     try {
         // Fetch equipment data from equipment.json
         const response = await fetch('../assets/data/equipment.json');
@@ -22,17 +31,58 @@ async function loadEquipment() {
             
             // Add image
             const img = document.createElement('img');
-            img.src = `../assets/icons/icon-labtrack.png`;
-            img.alt = equipment.name;
-            img.classList.add('equipment-image');
+            img.src = `../assets/images/${equipment['image']}`;
+            img.alt = equipment['name'];
             
             // Add equipment name
             const name = document.createElement('h3');
-            name.textContent = equipment.name;
+            name.textContent = equipment['name'];
 
             // Add borrow button
             const btnBorrow = document.createElement('button');
             btnBorrow.textContent = 'Borrow';
+            btnBorrow.addEventListener('click', () => {
+                // don't add if item is already in the borrowing list
+                if (borrowingList.includes(equipment['name'])) {
+                    console.log('ITEM HAS ALREADY BEEN ADDED!')
+                    return;
+                }
+
+                // clone row template
+                const newRow = rowTemplate.cloneNode(true);
+                
+                // add image
+                const equipmentImage = newRow.querySelector('.equipment-image > img')
+                equipmentImage.src = img.src;
+
+                // add equipment name
+                const equipmentName = newRow.querySelector('.equipment-name');
+                equipmentName.textContent = equipment['name'];
+
+                // initialize spinbox
+                const spinbox = newRow.querySelector('.spinbox');
+                new Spinbox(spinbox);
+
+                // initialize delete button
+                const btnDelete = newRow.querySelector('button.delete');
+                btnDelete.addEventListener('click', () => {
+                    const index = borrowingList.indexOf(equipment['name'])
+                    if (index > -1) {
+                        borrowingList.splice(index, 1);
+                    }
+                    newRow.remove();
+                    console.log(`REMOVED ${equipment['name']}`);
+                })
+
+                // unhide new row
+                newRow.classList.remove('hidden');
+                
+                // append new row
+                tableBody.appendChild(newRow);
+
+                borrowingList.push(equipment['name']);
+                console.log(`ADDED ${equipment['name']}`);
+            })
 
             // Append image and name to card
             equipmentCard.appendChild(img);
@@ -113,10 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
     })
-
-    document.querySelectorAll('.spinbox').forEach((spinboxElement) => {
-        new Spinbox(spinboxElement);
-    });
     
     loadEquipment();
 });

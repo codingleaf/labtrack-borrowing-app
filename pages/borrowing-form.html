@@ -50,7 +50,7 @@
             <p>1/2</p>
         </div>
 
-        <div id="equipment-selection-container" class="page hidden">
+        <div id="equipment-selection-container" class="page">
             <div id="top">
                 <button id="btn-back-es" class="btn-back">&lt;</button>
                 <h1>Equipment Selection</h1>
@@ -72,7 +72,7 @@
             <p>2/2</p>
         </div>
 
-        <div id="borrowing-list-container" class="page">
+        <div id="borrowing-list-container" class="page hidden">
             <div id="top">
                 <button id="btn-back-bl" class="btn-back">&lt;</button>
                 <h1>Borrowing List</h1>
@@ -90,9 +90,9 @@
                     </thead>
                     <tbody>
                         <!-- Dynamically populated -->
-                         <tr>
-                            <td><img src="../assets/images/placeholder.jpg"></td>
-                            <td>Equipment Name</td>
+                         <tr id="row-template" class="hidden">
+                            <td class="equipment-image"><img src="../assets/icons/icon-labtrack.png"></td>
+                            <td class="equipment-name">Equipment Name</td>
                             <td>
                                 <div class="spinbox">
                                     <button class="spinbox-increment">+</button>
@@ -100,7 +100,7 @@
                                     <button class="spinbox-decrement">-</button>
                                 </div>
                             </td>
-                            <td><button type="button" class="cancel"><img src="../assets/icons/icon-cancel.png"></button></td>
+                            <td><button type="button" class="delete"><img src="../assets/icons/icon-cancel.png"></button></td>
                          </tr>
                     </tbody>
                 </table>
