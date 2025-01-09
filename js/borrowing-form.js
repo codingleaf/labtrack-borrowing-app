@@ -2,6 +2,9 @@
 
 import { Spinbox } from './spinbox.js'
 
+// Timeout
+let timeoutID;
+
 // Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
     // Reference to the equipment container
@@ -12,6 +15,9 @@ async function loadEquipment() {
 
     // Reference to the borrowing list table
     const tableBody = document.querySelector('#borrowing-list-table > tbody');
+
+    // Reference to notification popup
+    const notification = document.querySelector('.notification');
 
     // Borrowing List
     let borrowingList = [];
@@ -85,6 +91,11 @@ async function loadEquipment() {
                 tableBody.appendChild(newRow);
 
                 borrowingList.push(equipment['name']);
+
+                notification.textContent = `ADDED ${equipment['name']}`;
+
+                showNotification();
+
                 console.log(`ADDED ${equipment['name']}`);
             })
 
@@ -146,6 +157,20 @@ function nextPage(pages, currentPageIndex) {
             .forEach(page => page.classList.add('hidden'));
         pages[nextPageIndex].classList.remove('hidden');
     }
+}
+
+function showNotification() {
+    const notification = document.querySelector('.notification');
+    notification.classList.add('show-notification');
+  
+    if (timeoutID) {
+        clearTimeout(timeoutID);
+    }
+
+    // Automatically hide the popup after 3 seconds
+    timeoutID = setTimeout(() => {
+        notification.classList.remove('show-notification');
+    }, 1500);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

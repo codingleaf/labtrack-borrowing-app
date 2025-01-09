@@ -123,6 +123,12 @@ input {
     width: 100%;
 }
 
+#notifications-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 #search-bar {
     display: flex;
     background-color: #808080;
@@ -209,6 +215,10 @@ input {
     background-color: var(--primary);
     color: var(--white);
     font-size: 1rem;
+}
+
+.equipment-card > button:hover {
+    opacity: 0.9;
 }
 
 .hidden {
@@ -342,5 +352,28 @@ td {
 .spinbox button:active {
     background-color: var(--primary);
     color: var(--white);
+}
+/*****/
+
+/**notifications**/
+.notification {
+    z-index: 1;
+    position: absolute;
+    top: -45px;
+    right: 20px;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--primary);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.show-notification {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
 }
 /*****/
