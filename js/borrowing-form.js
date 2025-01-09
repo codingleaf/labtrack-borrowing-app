@@ -1,6 +1,6 @@
 'use strict';
 
-import { redirectTo } from './redirect.js';
+import { Spinbox } from './spinbox.js'
 
 // Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
@@ -94,7 +94,6 @@ function nextPage(pages, currentPageIndex) {
     }
 }
 
-// Load equipment on page load
 document.addEventListener('DOMContentLoaded', () => {
     const pages = [...document.querySelectorAll('.page')];
     pages.forEach((page, index) => {
@@ -115,5 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    document.querySelectorAll('.spinbox').forEach((spinboxElement) => {
+        new Spinbox(spinboxElement);
+    });
+    
     loadEquipment();
 });

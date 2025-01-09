@@ -283,31 +283,47 @@ td {
     margin-bottom: 1rem;
 }
 
-input[type="number"]{
+.spinbox input {
     width: 100%;
     text-align: center;
     appearance: textfield;
     border: none;
-    padding: 0;
-    outline: none;
+    padding: 0 0.5rem;
+    z-index: 0;
+    height: 3rem;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
-  margin: 0;
+.spinbox input::-webkit-inner-spin-button, 
+.spinbox input::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#number-input-container {
+.spinbox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1.5rem;
+    width: 3rem;
     border-radius: 1rem;
+    position: relative;
 }
 
-button.plus,
-button.minus {
+.spinbox input:focus {
+    outline: 2px solid #217A34;
+}
+
+.spinbox-increment {
+    position: relative;
+    top: 0.5rem;
+}
+
+.spinbox-decrement {
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.spinbox button {
+    z-index: 1;
     color: var(--primary);
     border: 2px solid var(--primary);
     font-weight: bold;
@@ -315,13 +331,11 @@ button.minus {
     width: 1.5rem; 
     height: 1.5rem; 
     font-size: 0.7rem;
-    background-color: transparent; 
+    background-color: var(--white); 
 }
 
-button.plus:hover,
-button.plus:active,
-button.minus:hover,
-button.minus:active {
+.spinbox button:hover,
+.spinbox button:active {
     background-color: var(--primary);
     color: var(--white);
 }
