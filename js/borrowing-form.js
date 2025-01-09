@@ -1,6 +1,7 @@
 'use strict';
 
 import { Spinbox } from './spinbox.js'
+import { validateForm } from './borrower-details-validation.js'
 
 // Timeout
 let timeoutID;
@@ -170,9 +171,10 @@ function showNotification() {
     // Automatically hide the popup after 3 seconds
     timeoutID = setTimeout(() => {
         notification.classList.remove('show-notification');
-    }, 1500);
+    }, 2000);
 }
 
+// Main
 document.addEventListener('DOMContentLoaded', () => {
     const pages = [...document.querySelectorAll('.page')];
     pages.forEach((page, index) => {
@@ -190,6 +192,19 @@ document.addEventListener('DOMContentLoaded', () => {
             btnNext.addEventListener('click', () => {
                 nextPage(pages, index);
             })
+        }
+    })
+
+    // Prevent form submission for validation
+    document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    });
+    
+    const btnValidateForm = document.querySelector('#btn-validate-form');
+    btnValidateForm.addEventListener('click', () => {
+        const proceed = validateForm();
+        if (proceed) {
+            nextPage(pages, 0);
         }
     })
     

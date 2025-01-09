@@ -45,7 +45,7 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
     max-width: 30rem;
     flex: 1;
@@ -78,7 +78,7 @@ input {
     border-radius: 0.5rem;
 }
 
-#btn-next {
+#btn-validate-form {
     background-color: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
@@ -87,8 +87,8 @@ input {
     align-self: flex-end;
 }
 
-#btn-next:hover,
-#btn-next:active {
+#btn-validate-form:hover,
+#btn-validate-form:active {
     color: var(--white);
     background-color: var(--primary);
 }
@@ -297,6 +297,10 @@ td {
     margin-bottom: 1rem;
 }
 
+#btn-confirm:hover {
+    opacity: 0.9;
+}
+
 .spinbox input {
     width: 100%;
     text-align: center;
@@ -317,7 +321,7 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 2rem;
+    width: 2.2rem;
     border-radius: 1rem;
     position: relative;
 }
@@ -355,7 +359,7 @@ td {
 }
 /*****/
 
-/**notifications**/
+/**Notifications**/
 .notification {
     z-index: 1;
     position: absolute;
@@ -376,4 +380,16 @@ td {
     visibility: visible;
     transition: 0.5s;
 }
-/*****/
+
+/**Errors**/
+    .error-message {
+        color: #E53232;
+        font-size: 0.75rem;
+        display: block;
+        visibility: hidden;
+    }
+
+    .error-visible {
+        visibility: visible;
+    }
+/**

@@ -22,7 +22,7 @@
         <h1 id="app-title">LabTrack</h1>
     </header>
     <main>
-        <div id="borrower-details-container" class="page hidden">
+        <div id="borrower-details-container" class="page">
             <div id="top">
                 <div></div>
                 <h1>Borrower Details</h1>
@@ -31,26 +31,33 @@
             <form>
                 <div class="field">
                     <label>First Name</label>
-                    <input type="text" placeholder="John" required>
+                    <input type="text" id="first-name" placeholder="John" novalidate>
+                    <span class="error-message" id="first-name-error"></span>
                 </div>
+                
                 <div class="field">
                     <label>Last Name</label>
-                    <input type="text" placeholder="Doe" required>
+                    <input type="text" id="last-name" placeholder="Doe" novalidate>
+                    <span class="error-message" id="last-name-error"></span>
                 </div>
+                
                 <div class="field">
                     <label>Email</label>
-                    <input type="text" placeholder="e.g. john.doe@example.com" required>
+                    <input type="text" id="email" placeholder="e.g. john.doe@example.com" novalidate>
+                    <span class="error-message" id="email-error"></span>
                 </div>
+                
                 <div class="field">
                     <label>Contact No.</label>
-                    <input type="text" placeholder="e.g. 09123456789" required>
+                    <input type="text" id="contact-no" placeholder="e.g. 09123456789" novalidate>
+                    <span class="error-message" id="contact-no-error"></span>
                 </div>
-                <button id="btn-next" class="btn-next">Next</button>
+                <button id="btn-validate-form">Next</button>
             </form>
             <p>1/2</p>
         </div>
 
-        <div id="equipment-selection-container" class="page">
+        <div id="equipment-selection-container" class="page hidden">
             <div id="top">
                 <button id="btn-back-es" class="btn-back">&lt;</button>
                 <h1>Equipment Selection</h1>
