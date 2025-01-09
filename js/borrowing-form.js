@@ -52,7 +52,7 @@ async function loadEquipment() {
                 const newRow = rowTemplate.cloneNode(true);
                 
                 // add image
-                const equipmentImage = newRow.querySelector('.equipment-image > img')
+                const equipmentImage = newRow.querySelector('.equipment-image')
                 equipmentImage.src = img.src;
 
                 // add equipment name
@@ -73,6 +73,10 @@ async function loadEquipment() {
                     newRow.remove();
                     console.log(`REMOVED ${equipment['name']}`);
                 })
+
+                // remove id
+                newRow.removeAttribute('id');
+                newRow.removeAttribute('class');
 
                 // unhide new row
                 newRow.classList.remove('hidden');

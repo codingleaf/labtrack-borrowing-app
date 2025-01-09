@@ -83,7 +83,6 @@
                     <thead>
                         <tr>
                             <th>Equipment</th>
-                            <th></th>
                             <th>Quantity</th>
                             <th></th>
                         </tr>
@@ -91,8 +90,12 @@
                     <tbody>
                         <!-- Dynamically populated -->
                          <tr id="row-template" class="hidden">
-                            <td class="equipment-image"><img src="../assets/icons/icon-labtrack.png"></td>
-                            <td class="equipment-name">Equipment Name</td>
+                            <td>
+                                <div class="equipment">
+                                    <img class="equipment-image" src="../assets/icons/icon-labtrack.png">
+                                    <h4 class="equipment-name">Equipment Name</h4>
+                                </div>
+                            </td>
                             <td>
                                 <div class="spinbox">
                                     <button class="spinbox-increment">+</button>

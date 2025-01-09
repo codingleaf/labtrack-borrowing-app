@@ -247,6 +247,10 @@ th, td {
     padding: 0.5rem 0.5rem;
 }
 
+th {
+    word-break: break-all;
+}
+
 td {
     border-top: 1px solid #CCCCCC;
 }
@@ -257,7 +261,7 @@ td {
     align-items: center;
     width: 100%;
     overflow: auto;
-    padding: 0 1rem 0.5rem 0.5rem;
+    padding: 0 0 0.5rem 0.5rem;
     border-bottom: 1px dotted #808080;
     flex-grow: 1;
 }
@@ -269,6 +273,7 @@ td {
     overflow-y: auto;
     border-collapse: collapse;
     padding: 0.5rem;
+    table-layout: fixed;
 }
 
 #btn-confirm {
@@ -286,8 +291,8 @@ td {
     width: 100%;
     text-align: center;
     appearance: textfield;
-    border: none;
-    padding: 0 0.5rem;
+    border: 2px solid #217A34;
+    padding: 0 0.2rem;
     z-index: 0;
     height: 3rem;
 }
@@ -302,7 +307,7 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 3rem;
+    width: 2rem;
     border-radius: 1rem;
     position: relative;
 }
