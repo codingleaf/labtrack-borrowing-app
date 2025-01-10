@@ -1,8 +1,9 @@
 'use strict';
 
-import { Spinbox } from './spinbox.js'
-import { validateForm } from './borrower-details-validation.js'
+import { Spinbox } from './spinbox.js';
+import { validateForm } from './borrower-details-validation.js';
 import { generateSummary } from './generate-summary.js';
+import { generateQR } from './generate-qr.js';
 
 // Timeout
 let blTimeoutID;
@@ -227,8 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnGenerateQR = document.querySelector('#btn-generate-qr');
     btnGenerateQR.addEventListener('click', () => {
-        const jsonQRData = JSON.stringify(qrData);
-        
+        generateQR(qrData, '../assets/icons/icon-labtrack.png');
         nextPage(pages, 3);
     })
     

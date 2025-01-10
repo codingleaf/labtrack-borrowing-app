@@ -26,7 +26,11 @@ export function generateSummary(borrowingList) {
         summaryBl.appendChild(summaryEquipment);
     })
 
+    // generate UUID
+    const borrowingID = generateUUID();
+
     const summary = {
+        "borrowingID": borrowingID,
         "firstName": firstName,
         "lastName": lastName,
         "email": email,
@@ -36,6 +40,12 @@ export function generateSummary(borrowingList) {
     
     console.log(summary);
     return summary;
+}
+
+function generateUUID() {
+    const uuid = crypto.randomUUID();
+    const timestamp = Date.now();
+    return `${uuid}-${timestamp}`;
 }
 
 function removeAllChildNodes(parent) {

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../css/qr.css">
         
     <!-- scripts -->
+     <script src="../libs/qrcode.min.js"></script>
     <script type="module" src="../js/borrowing-form.js" defer></script>
 </head>
 <body>
@@ -174,12 +175,20 @@
                 <h1>QR Code</h1>
                 <div></div>
             </div>
-
+            
             <div id="qr">
-                <img id="qr-code" alt="QR Code">
+                <!-- QR Code container -->
+                <div id="qr-code">
+                    <img src="../assets/icons/icon-labtrack.png" alt="app logo">
+                </div>
+
+                <div id="note">
+                    <h3>Present this to the laboratory staff to proceed with the borrowing process.</h3>
+                    <h3><span>Note:</span> Please save the image since it will be used in the return process.</h3>
+                </div>
             </div>
 
-            <button id="btn-save">Save Image</button>
+            <a id="link-download-qr">Save Image</a>
         </div>
     </main>
 </body>
