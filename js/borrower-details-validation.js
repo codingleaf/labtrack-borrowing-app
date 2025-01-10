@@ -13,6 +13,10 @@ export function validateForm() {
         firstNameError.textContent = "First name is required.";
         firstNameError.classList.add('error-visible');
         hasErrors = true;
+    } else if (firstName.length > 50) {
+        firstNameError.textContent = "First name must not exceed 50 characters.";
+        firstNameError.classList.add('error-visible');
+        hasErrors = true;
     }
 
     // Last Name Validation
@@ -20,6 +24,10 @@ export function validateForm() {
     const lastNameError = document.getElementById('last-name-error');
     if (!lastName) {
         lastNameError.textContent = "Last name is required.";
+        lastNameError.classList.add('error-visible');
+        hasErrors = true;
+    } else if (lastName.length > 50) {
+        lastNameError.textContent = "Last name must not exceed 50 characters.";
         lastNameError.classList.add('error-visible');
         hasErrors = true;
     }
@@ -33,6 +41,10 @@ export function validateForm() {
         hasErrors = true;
     } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
         emailError.textContent = "Please enter a valid email address.";
+        emailError.classList.add('error-visible');
+        hasErrors = true;
+    } else if (email.length > 320) {
+        emailError.textContent = "Email must not exceed 320 characters.";
         emailError.classList.add('error-visible');
         hasErrors = true;
     }
