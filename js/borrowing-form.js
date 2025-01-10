@@ -51,7 +51,7 @@ async function loadEquipment() {
             btnBorrow.textContent = 'Borrow';
             btnBorrow.addEventListener('click', () => {
                 // don't add if item is already in the borrowing list
-                if (borrowingList.includes(equipment['name'])) {
+                if (borrowingList.some(listItem => listItem['name'] === equipment['name'])) {
                     console.log('ITEM HAS ALREADY BEEN ADDED!')
                     return;
                 }
@@ -198,6 +198,19 @@ document.addEventListener('DOMContentLoaded', () => {
             btnNext.addEventListener('click', () => {
                 nextPage(pages, index);
             })
+        }
+    })
+
+    // Borrowing List Button
+    const btnBorrowingList = document.querySelector('#btn-borrowing-list');
+    btnBorrowingList.addEventListener('click', () => {
+        if (borrowingList.length === 0) {
+            const notification = document.querySelector('.notification');
+            notification.textContent = 'Empty';
+            showNotification();
+        }
+        else {
+            nextPage(pages, 1)
         }
     })
 
