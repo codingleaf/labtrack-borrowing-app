@@ -2,7 +2,7 @@
 
 import { Spinbox } from './spinbox.js'
 import { validateForm } from './borrower-details-validation.js'
-import { showSummary } from './show-summary.js';
+import { generateSummary } from './generate-summary.js';
 
 // Timeout
 let blTimeoutID;
@@ -10,6 +10,9 @@ let confirmTimeoutID;
 
 // Borrowing List
 let borrowingList = [];
+
+// Data Summary (For Generating QR Code)
+let qrData;
 
 // Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
@@ -49,6 +52,7 @@ async function loadEquipment() {
             btnBorrow.textContent = 'Borrow';
             btnBorrow.addEventListener('click', () => {
                 // don't add if item is already in the borrowing list
+                blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
                 if (borrowingList.some(listItem => listItem['name'] === equipment['name'])) {
                     console.log('ITEM HAS ALREADY BEEN ADDED!')
                     return;
@@ -98,7 +102,7 @@ async function loadEquipment() {
                                      quantity: 1 });
 
                 // notification
-                showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`, blTimeoutID);
+                blTimeoutID = showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`, blTimeoutID);
 
                 console.log(`ADDED ${equipment['name']}`);
             })
@@ -173,7 +177,7 @@ function showNotification(element, text, timeoutID) {
     }
 
     // Automatically hide the popup after 3 seconds
-    timeoutID = setTimeout(() => {
+    return setTimeout(() => {
         notification.classList.remove('show-notification');
     }, 2000);
 }
@@ -214,11 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnConfirm = document.querySelector('#btn-confirm');
     btnConfirm.addEventListener('click', () => {
         if (borrowingList.length > 0) {
-            showSummary(borrowingList);
+            qrData = generateSummary(borrowingList);
             nextPage(pages, 2);
         } else {
-            showNotification('#confirm-notification', 'List is Empty', confirmTimeoutID);
+            confirmTimeoutID = showNotification('#confirm-notification', 'List is Empty', confirmTimeoutID);
         }
+    })
+
+    const btnGenerateQR = document.querySelector('#btn-generate-qr');
+    btnGenerateQR.addEventListener('click', () => {
+        const jsonQRData = JSON.stringify(qrData);
+        
+        nextPage(pages, 3);
     })
     
     loadEquipment();

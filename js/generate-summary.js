@@ -1,6 +1,6 @@
 'use strict';
 
-export function showSummary(borrowingList) {
+export function generateSummary(borrowingList) {
     // Borrower Details
     const firstName = document.querySelector('#first-name').value;
     const lastName = document.querySelector('#last-name').value;
@@ -26,7 +26,16 @@ export function showSummary(borrowingList) {
         summaryBl.appendChild(summaryEquipment);
     })
 
-    console.log(firstName, lastName, email, contactNumber, borrowingList)
+    const summary = {
+        "firstName": firstName,
+        "lastName": lastName,
+        "email": email,
+        "contactNumber": contactNumber,
+        "borrowingList": borrowingList
+    }
+    
+    console.log(summary);
+    return summary;
 }
 
 function removeAllChildNodes(parent) {

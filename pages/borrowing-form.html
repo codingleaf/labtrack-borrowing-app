@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/notifications.css">
     <link rel="stylesheet" href="../css/borrowing-list.css">
     <link rel="stylesheet" href="../css/summary.css">
+    <link rel="stylesheet" href="../css/qr.css">
         
     <!-- scripts -->
     <script type="module" src="../js/borrowing-form.js" defer></script>
@@ -29,7 +30,7 @@
     </header>
     <main>
         <!-- BORROWER DETAILS PAGE -->
-        <div id="borrower-details-container" class="page">
+        <div id="borrower-details-container" class="page hidden">
             <div id="top">
                 <div></div>
                 <h1>Borrower Details</h1>
@@ -74,14 +75,14 @@
 
             <div id="user-tools">
                 <div id="search-bar">
-                    <img src="../assets/icons/icon-search.png">
+                    <img src="../assets/icons/icon-search.png" alt="search icon">
                     <input id="search-input" type="search" placeholder="Search equipment...">
                 </div>
                 
                 <div class="notification-container">
                     <div id="borrowing-list-notification" class="notification"></div>
                     <button id="btn-borrowing-list">
-                        <img src="../assets/icons/icon-list.png" alt="search icon">
+                        <img src="../assets/icons/icon-list.png" alt="list icon">
                     </button>
                 </div>
             </div>
@@ -124,7 +125,7 @@
                                     <button class="spinbox-decrement">-</button>
                                 </div>
                             </td>
-                            <td><button type="button" class="delete"><img src="../assets/icons/icon-x.png"></button></td>
+                            <td><button type="button" class="delete"><img src="../assets/icons/icon-x.png" alt="x icon"></button></td>
                          </tr>
                     </tbody>
                 </table>
@@ -164,6 +165,21 @@
                 </div>
             </div>
             <button id="btn-generate-qr">Generate QR</button>
+        </div>
+
+        <!-- QR -->
+        <div id="qr-container" class="page">
+            <div id="top">
+                <button id="btn-back-qr" class="btn-back">&lt;</button>
+                <h1>QR Code</h1>
+                <div></div>
+            </div>
+
+            <div id="qr">
+                <img id="qr-code" alt="QR Code">
+            </div>
+
+            <button id="btn-save">Save Image</button>
         </div>
     </main>
 </body>

@@ -68,4 +68,8 @@ li {
     margin-top: auto;
     margin-bottom: 1rem;
 }
+
+#btn-generate-qr:hover {
+    opacity: 0.9;
+}
 /*****/

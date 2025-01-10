@@ -1,0 +1,15 @@
+#qr {
+    padding-right: 0.75rem;
+    padding-bottom: 0.6rem;
+}
+
+#btn-save {
+    padding: 0.2rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #217A34;
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
