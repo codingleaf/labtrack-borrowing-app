@@ -74,7 +74,7 @@ async function loadEquipment() {
                 // initialize delete button
                 const btnDelete = newRow.querySelector('button.delete');
                 btnDelete.addEventListener('click', () => {
-                    const index = borrowingList.indexOf(equipment['name'])
+                    const index = borrowingList.findIndex(listItem => listItem['name'] === equipment['name'])
                     if (index > -1) {
                         borrowingList.splice(index, 1);
                     }
