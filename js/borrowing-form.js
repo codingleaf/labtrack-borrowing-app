@@ -5,7 +5,8 @@ import { validateForm } from './borrower-details-validation.js'
 import { showSummary } from './show-summary.js';
 
 // Timeout
-let timeoutID;
+let blTimeoutID;
+let confirmTimeoutID;
 
 // Borrowing List
 let borrowingList = [];
@@ -97,7 +98,7 @@ async function loadEquipment() {
                                      quantity: 1 });
 
                 // notification
-                showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`);
+                showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`, blTimeoutID);
 
                 console.log(`ADDED ${equipment['name']}`);
             })
@@ -162,7 +163,7 @@ function nextPage(pages, currentPageIndex) {
     }
 }
 
-function showNotification(element, text) {
+function showNotification(element, text, timeoutID) {
     const notification = document.querySelector(element);
     notification.textContent = text;
     notification.classList.add('show-notification');
@@ -216,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showSummary(borrowingList);
             nextPage(pages, 2);
         } else {
-            showNotification('#confirm-notification', 'List is Empty');
+            showNotification('#confirm-notification', 'List is Empty', confirmTimeoutID);
         }
     })
     
