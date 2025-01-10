@@ -1,9 +1,6 @@
 /**Notifications**/
 .notification {
-    z-index: 1;
-    position: absolute;
-    top: -45px;
-    right: 20px;
+    z-index: 999;
     background-color: rgba(240, 240, 240, 0.9);
     padding: 0.5rem 1rem;
     border-radius: 1rem;
@@ -18,4 +15,21 @@
     opacity: 1;
     visibility: visible;
     transition: 0.5s;
+}
+
+.notification-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#borrowing-list-notification {
+    position: absolute;
+    top: -45px;
+    right: 20px;
+}
+
+#confirm-notification {
+    position: absolute;
+    bottom: 6.2rem;
 }

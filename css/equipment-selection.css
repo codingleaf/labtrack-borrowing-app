@@ -6,12 +6,6 @@
     width: 100%;
 }
 
-#notifications-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
 #search-bar {
     display: flex;
     background-color: #808080;

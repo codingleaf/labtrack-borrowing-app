@@ -21,9 +21,6 @@ async function loadEquipment() {
     // Reference to the borrowing list table
     const tableBody = document.querySelector('#borrowing-list-table > tbody');
 
-    // Reference to notification popup
-    const notification = document.querySelector('.notification');
-
     try {
         // Fetch equipment data from equipment.json
         const response = await fetch('../assets/data/equipment.json');
@@ -100,8 +97,7 @@ async function loadEquipment() {
                                      quantity: 1 });
 
                 // notification
-                notification.textContent = `ADDED ${equipment['name']}`;
-                showNotification();
+                showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`);
 
                 console.log(`ADDED ${equipment['name']}`);
             })
@@ -166,8 +162,9 @@ function nextPage(pages, currentPageIndex) {
     }
 }
 
-function showNotification() {
-    const notification = document.querySelector('.notification');
+function showNotification(element, text) {
+    const notification = document.querySelector(element);
+    notification.textContent = text;
     notification.classList.add('show-notification');
   
     if (timeoutID) {
@@ -192,28 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    pages.forEach((page, index) => {
-        const btnNext = page.querySelector('.btn-next')
-        if (btnNext) {
-            btnNext.addEventListener('click', () => {
-                nextPage(pages, index);
-            })
-        }
-    })
-
-    // Borrowing List Button
-    const btnBorrowingList = document.querySelector('#btn-borrowing-list');
-    btnBorrowingList.addEventListener('click', () => {
-        if (borrowingList.length === 0) {
-            const notification = document.querySelector('.notification');
-            notification.textContent = 'Empty';
-            showNotification();
-        }
-        else {
-            nextPage(pages, 1)
-        }
-    })
-
     // Prevent form submission for validation
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -228,10 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    // BorrowingList
+    const btnBorrowingList = document.querySelector('#btn-borrowing-list');
+    btnBorrowingList.addEventListener('click', () => {
+        nextPage(pages, 1);
+    })
+
     // Confirm Borrowing List (Show Summary)
     const btnConfirm = document.querySelector('#btn-confirm');
     btnConfirm.addEventListener('click', () => {
-        showSummary(borrowingList);
+        if (borrowingList.length > 0) {
+            showSummary(borrowingList);
+            nextPage(pages, 2);
+        } else {
+            showNotification('#confirm-notification', 'List is Empty');
+        }
     })
     
     loadEquipment();
