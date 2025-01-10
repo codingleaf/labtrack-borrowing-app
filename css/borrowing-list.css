@@ -1,0 +1,137 @@
+/** Table **/
+table div {
+    margin: 0 auto;
+}
+
+table img {
+    margin: 0 auto;
+    width: 6rem; 
+    height: 5rem; 
+    object-fit: contain;
+}
+
+button.delete {
+    border-radius: 4rem; 
+    background-color: transparent; 
+    border: none;
+    padding: 0;
+}
+
+button.delete > img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--white);
+    box-shadow: 0 2px 0 #CCCCCC;
+}
+
+th, td {
+    padding: 0.5rem 0.5rem;
+}
+
+th {
+    word-break: break-all;
+}
+
+td {
+    border-top: 1px solid #CCCCCC;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    padding: 0 0 0.5rem 0.5rem;
+    border-bottom: 1px dotted #808080;
+    flex-grow: 1;
+}
+
+#borrowing-list-table {
+    width: 100%;
+    max-width: 50rem;
+    text-align: center;
+    overflow-y: auto;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    table-layout: fixed;
+}
+
+#btn-confirm {
+    padding: 0.2rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #217A34;
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+#btn-confirm:hover {
+    opacity: 0.9;
+}
+
+.spinbox input {
+    width: 100%;
+    text-align: center;
+    appearance: textfield;
+    border: 2px solid #217A34;
+    padding: 0 0.2rem;
+    z-index: 0;
+    height: 3rem;
+}
+
+.spinbox input::-webkit-inner-spin-button, 
+.spinbox input::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.spinbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2.2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.spinbox input:focus {
+    outline: 2px solid #217A34;
+}
+
+.spinbox-increment {
+    position: relative;
+    top: 0.5rem;
+}
+
+.spinbox-decrement {
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.spinbox button {
+    z-index: 1;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: bold;
+    border-radius: 1rem;
+    width: 1.5rem; 
+    height: 1.5rem; 
+    font-size: 0.7rem;
+    background-color: var(--white); 
+}
+
+.spinbox button:hover,
+.spinbox button:active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+/*****/
