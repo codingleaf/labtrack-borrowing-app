@@ -22,6 +22,7 @@
         <h1 id="app-title">LabTrack</h1>
     </header>
     <main>
+        <!-- BORROWER DETAILS PAGE -->
         <div id="borrower-details-container" class="page hidden">
             <div id="top">
                 <div></div>
@@ -57,6 +58,7 @@
             <p>1/2</p>
         </div>
 
+        <!-- EQUIPMENT SELECTION PAGE -->
         <div id="equipment-selection-container" class="page hidden">
             <div id="top">
                 <button id="btn-back-es" class="btn-back">&lt;</button>
@@ -77,12 +79,14 @@
                     </button>
                 </div>
             </div>
+
             <section id="equipment-container">
                 <!-- Dynamically populated -->
             </section>
             <p>2/2</p>
         </div>
 
+        <!-- BORROWING LIST PAGE -->
         <div id="borrowing-list-container" class="page">
             <div id="top">
                 <button id="btn-back-bl" class="btn-back">&lt;</button>
@@ -119,7 +123,35 @@
                     </tbody>
                 </table>
             </div>
-            <button id="btn-confirm">Confirm</button>
+            <button id="btn-confirm" class="btn-next">Confirm</button>
+        </div>
+
+        <!-- SUMMARY PAGE -->
+        <div id="summary-container" class="page hidden">
+            <div id="top">
+                <button id="btn-back-summary" class="btn-back">&lt;</button>
+                <h1>Summary</h1>
+                <div></div>
+            </div>
+
+            <div id="summary">
+                <div id="summary-bd">
+                    <h3>Borrower Details</h2>
+                    <div class="row-header">
+                        <h4>First Name: <span id="summary-fn"></span></h3>
+                        <h4>Last Name: <span id="summary-ln"></span></h3>
+                        <h4>Email: <span id="summary-email"></span></h3>
+                        <h4>Contact No.: <span id="summary-contact"></span></h3>
+                    </div>
+                </div>
+                <div id="summary-bl">
+                    <h3>Borrowing List</h2>
+                    <ul id="equipment-list">
+                        <!-- Dynamically Populated -->
+                    </ul>
+                </div>
+            </div>
+            <button id="btn-generate-qr">Generate QR</button>
         </div>
     </main>
 </body>

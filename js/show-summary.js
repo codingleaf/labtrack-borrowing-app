@@ -13,5 +13,24 @@ export function showSummary(borrowingList) {
         borrowingList[index]['quantity'] = spinbox.value;
     })
 
+    document.querySelector('#summary-fn').textContent = firstName;
+    document.querySelector('#summary-ln').textContent = lastName;
+    document.querySelector('#summary-email').textContent = email;
+    document.querySelector('#summary-contact').textContent = contactNumber;
+
+    const summaryBl = document.querySelector('#equipment-list');
+    removeAllChildNodes(summaryBl);
+    borrowingList.forEach(equipment => {
+        const summaryEquipment = document.createElement('li');
+        summaryEquipment.textContent = `${equipment['name']} (${equipment['quantity']})`;
+        summaryBl.appendChild(summaryEquipment);
+    })
+
     console.log(firstName, lastName, email, contactNumber, borrowingList)
+}
+
+function removeAllChildNodes(parent) {
+    while(parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }

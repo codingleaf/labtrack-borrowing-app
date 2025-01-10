@@ -13,10 +13,6 @@ export function validateForm() {
         firstNameError.textContent = "First name is required.";
         firstNameError.classList.add('error-visible');
         hasErrors = true;
-    } else if (!/^[A-Za-z]+$/.test(firstName)) {
-        firstNameError.textContent = "First name should only contain letters.";
-        firstNameError.classList.add('error-visible');
-        hasErrors = true;
     }
 
     // Last Name Validation
@@ -24,10 +20,6 @@ export function validateForm() {
     const lastNameError = document.getElementById('last-name-error');
     if (!lastName) {
         lastNameError.textContent = "Last name is required.";
-        lastNameError.classList.add('error-visible');
-        hasErrors = true;
-    } else if (!/^[A-Za-z]+$/.test(lastName)) {
-        lastNameError.textContent = "Last name should only contain letters.";
         lastNameError.classList.add('error-visible');
         hasErrors = true;
     }
