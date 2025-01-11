@@ -35,8 +35,7 @@ export function generateQR(data, appIconURL) {
                 // Add a download link
                 const downloadLink = document.querySelector('#link-download-qr');
                 downloadLink.href = dataURL;
-                downloadLink.download = 'qr-code.png'; // Default file name
-                downloadLink.textContent = 'Download QR Code';
+                downloadLink.download = 'labtrack-qr-code.png'; // Default file name
 
                 // Append the image and download link to the container
                 qrCode.appendChild(img);
