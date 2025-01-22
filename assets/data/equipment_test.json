@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "name": "Microscope",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Centrifuge",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Spectrophotometer",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Analytical Balance",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Hot Plate",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Beaker Set",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Bunsen Burner",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Pipette Set",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 9,
+      "name": "pH Meter",
+      "image": "placeholder.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Test Tube Rack",
+      "image": "placeholder.jpg"
+    }
+]
