@@ -1,52 +1,75 @@
 [
-    {
-      "id": 1,
-      "name": "Microscope",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Centrifuge",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Spectrophotometer",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Analytical Balance",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Hot Plate",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Beaker Set",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Bunsen Burner",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Pipette Set",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 9,
-      "name": "pH Meter",
-      "image": "placeholder.jpg"
-    },
-    {
-      "id": 10,
-      "name": "Test Tube Rack",
-      "image": "placeholder.jpg"
-    }
+    { "id": 1, "name": "Alcohol Burner", "image": "placeholder.jpg" },
+    { "id": 2, "name": "Aspirator", "image": "placeholder.jpg" },
+    { "id": 3, "name": "Atomic Molecular Model Kit", "image": "placeholder.jpg" },
+    { "id": 4, "name": "Balance", "image": "placeholder.jpg" },
+    { "id": 5, "name": "Balance", "image": "placeholder.jpg" },
+    { "id": 6, "name": "Balance", "image": "placeholder.jpg" },
+    { "id": 7, "name": "Balance", "image": "placeholder.jpg" },
+    { "id": 8, "name": "Basin", "image": "placeholder.jpg" },
+    { "id": 9, "name": "Batwing for Bunsen burner", "image": "placeholder.jpg" },
+    { "id": 10, "name": "Beaker, 100 mL", "image": "placeholder.jpg" },
+    { "id": 11, "name": "Beaker, 250 mL", "image": "placeholder.jpg" },
+    { "id": 12, "name": "Beaker, 400 mL", "image": "placeholder.jpg" },
+    { "id": 13, "name": "Beaker, 400 mL", "image": "placeholder.jpg" },
+    { "id": 14, "name": "Beaker, 500 mL", "image": "placeholder.jpg" },
+    { "id": 15, "name": "Beaker, 1000 mL", "image": "placeholder.jpg" },
+    { "id": 16, "name": "Beaker, 1000 mL", "image": "placeholder.jpg" },
+    { "id": 17, "name": "Borers", "image": "placeholder.jpg" },
+    { "id": 18, "name": "Bosshead clamp", "image": "placeholder.jpg" },
+    { "id": 19, "name": "Bunsen Burner", "image": "placeholder.jpg" },
+    { "id": 20, "name": "Burette", "image": "placeholder.jpg" },
+    { "id": 21, "name": "Burette (acid)", "image": "placeholder.jpg" },
+    { "id": 22, "name": "Burette (base)", "image": "placeholder.jpg" },
+    { "id": 23, "name": "Calorimeter", "image": "placeholder.jpg" },
+    { "id": 24, "name": "Centrifuge tube", "image": "placeholder.jpg" },
+    { "id": 25, "name": "Clamp (for Burette)", "image": "placeholder.jpg" },
+    { "id": 26, "name": "Clamp (Universal)", "image": "placeholder.jpg" },
+    { "id": 27, "name": "Condenser", "image": "placeholder.jpg" },
+    { "id": 28, "name": "Crucible with cover", "image": "placeholder.jpg" },
+    { "id": 29, "name": "Cylinder, Est. Cap. 1000 mL", "image": "placeholder.jpg" },
+    { "id": 30, "name": "Distilling flask, 250 mL cap.", "image": "placeholder.jpg" },
+    { "id": 31, "name": "Dropping bottle", "image": "placeholder.jpg" },
+    { "id": 32, "name": "Erlenmeyer flask, 125 mL", "image": "placeholder.jpg" },
+    { "id": 33, "name": "Erlenmeyer flask, 250 mL", "image": "placeholder.jpg" },
+    { "id": 34, "name": "Erlenmeyer flask, 500 mL", "image": "placeholder.jpg" },
+    { "id": 35, "name": "Erlenmeyer flask, 1000 mL", "image": "placeholder.jpg" },
+    { "id": 36, "name": "Erlenmeyer flask, 2000 mL", "image": "placeholder.jpg" },
+    { "id": 37, "name": "Evaporating dish", "image": "placeholder.jpg" },
+    { "id": 38, "name": "Forceps", "image": "placeholder.jpg" },
+    { "id": 39, "name": "Funnel (transfer)", "image": "placeholder.jpg" },
+    { "id": 40, "name": "Funnel (transfer)", "image": "placeholder.jpg" },
+    { "id": 41, "name": "Graduated cylinder, 10 mL", "image": "placeholder.jpg" },
+    { "id": 42, "name": "Graduated cylinder, 10 mL", "image": "placeholder.jpg" },
+    { "id": 43, "name": "Graduated cylinder, 50 mL", "image": "placeholder.jpg" },
+    { "id": 44, "name": "Graduated cylinder, 100 mL", "image": "placeholder.jpg" },
+    { "id": 45, "name": "Graduated cylinder, 100 mL", "image": "placeholder.jpg" },
+    { "id": 46, "name": "Graduated cylinder, 500 mL", "image": "placeholder.jpg" },
+    { "id": 47, "name": "Graduated cylinder, 500 mL", "image": "placeholder.jpg" },
+    { "id": 48, "name": "Hot Plate", "image": "placeholder.jpg" },
+    { "id": 49, "name": "Hot Plate", "image": "placeholder.jpg" },
+    { "id": 50, "name": "Iron ring", "image": "placeholder.jpg" },
+    { "id": 51, "name": "Iron stand", "image": "placeholder.jpg" },
+    { "id": 52, "name": "Masses", "image": "placeholder.jpg" },
+    { "id": 53, "name": "Mortar and pestle", "image": "placeholder.jpg" },
+    { "id": 54, "name": "Petri dish, with cover", "image": "placeholder.jpg" },
+    { "id": 55, "name": "Petri dish, without cover", "image": "placeholder.jpg" },
+    { "id": 56, "name": "pH Meter", "image": "placeholder.jpg" },
+    { "id": 57, "name": "Pipestem triangle", "image": "placeholder.jpg" },
+    { "id": 58, "name": "Pipette, 1.0 mL", "image": "placeholder.jpg" },
+    { "id": 59, "name": "Pipette, 1.0 mL", "image": "placeholder.jpg" },
+    { "id": 60, "name": "Pipette, 5.0 mL", "image": "placeholder.jpg" },
+    { "id": 61, "name": "Pipette, 10 x 1/10", "image": "placeholder.jpg" },
+    { "id": 62, "name": "Pipette, 10 x 1/10", "image": "placeholder.jpg" },
+    { "id": 63, "name": "Pipette, 1 x 1/10", "image": "placeholder.jpg" },
+    { "id": 64, "name": "Pipette (single channel)", "image": "placeholder.jpg" },
+    { "id": 65, "name": "Spatula", "image": "placeholder.jpg" },
+    { "id": 66, "name": "Spatula", "image": "placeholder.jpg" },
+    { "id": 67, "name": "Stirring rod", "image": "placeholder.jpg" },
+    { "id": 68, "name": "Stirring rod, 6mm x 75 cm", "image": "placeholder.jpg" },
+    { "id": 69, "name": "Syringe, 50 mL capacity", "image": "placeholder.jpg" },
+    { "id": 70, "name": "Test tube, 4 mL capacity", "image": "placeholder.jpg" },
+    { "id": 71, "name": "Test tube, 15 mL capacity", "image": "placeholder.jpg" },
+    { "id": 72, "name": "Test tube, 25 mL capacity", "image": "placeholder.jpg" },
+    { "id": 73, "name": "Test tube, 60 mL capacity", "image": "placeholder.jpg" }
 ]
