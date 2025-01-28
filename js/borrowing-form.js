@@ -9,6 +9,9 @@ import { generateQR } from './generate-qr.js';
 let blTimeoutID;
 let confirmTimeoutID;
 
+// EquipmentData
+let equipmentData;
+
 // Borrowing List
 let borrowingList = [];
 
@@ -32,13 +35,16 @@ async function loadEquipment() {
         if (!response.ok) {
             throw new Error('Failed to fetch equipment data');
         }
-        const equipmentData = await response.json();
+        equipmentData = await response.json();
 
         // Loop through the data and create equipment cards
         equipmentData.forEach(equipment => {
             const equipmentCard = document.createElement('div');
             equipmentCard.classList.add('equipment-card');
-            
+
+            // attach equipment id to the card 
+            equipmentCard.setAttribute('data-id', equipment['id'])
+
             // Add image
             const img = document.createElement('img');
             img.src = `../assets/images/${equipment['image']}`;
@@ -48,13 +54,21 @@ async function loadEquipment() {
             const name = document.createElement('h3');
             name.textContent = equipment['name'];
 
+            // Add equipment specification
+            const specification = document.createElement('p');
+            specification.textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
+
+            // Add equipment description
+            const description = document.createElement('p');
+            description.textContent = equipment['description'] ? equipment['description'] : '';
+
             // Add borrow button
             const btnBorrow = document.createElement('button');
             btnBorrow.textContent = 'Borrow';
             btnBorrow.addEventListener('click', () => {
                 // don't add if item is already in the borrowing list
-                blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
-                if (borrowingList.some(listItem => listItem['name'] === equipment['name'])) {
+                if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
+                    blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
                     console.log('ITEM HAS ALREADY BEEN ADDED!')
                     return;
                 }
@@ -70,6 +84,14 @@ async function loadEquipment() {
                 const equipmentName = newRow.querySelector('.equipment-name');
                 equipmentName.textContent = equipment['name'];
 
+                // add equipment specification
+                const equipmentSpecification = newRow.querySelector('.equipment-specification');
+                equipmentSpecification.textContent = equipment['specification'];
+
+                // add equipment description
+                const equipmentDescription = newRow.querySelector('.equipment-description');
+                equipmentDescription.textContent = equipment['description'];
+
                 // initialize spinbox
                 const spinbox = newRow.querySelector('.spinbox');
                 new Spinbox(spinbox);
@@ -77,7 +99,7 @@ async function loadEquipment() {
                 // initialize delete button
                 const btnDelete = newRow.querySelector('button.delete');
                 btnDelete.addEventListener('click', () => {
-                    const index = borrowingList.findIndex(listItem => listItem['name'] === equipment['name'])
+                    const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id'])
                     if (index > -1) {
                         borrowingList.splice(index, 1);
                     }
@@ -89,6 +111,9 @@ async function loadEquipment() {
                 newRow.removeAttribute('id');
                 newRow.removeAttribute('class');
 
+                // attach equipment id to the row
+                newRow.setAttribute('data-id', equipment['id']);
+
                 // unhide new row
                 newRow.classList.remove('hidden');
 
@@ -99,18 +124,30 @@ async function loadEquipment() {
                 tableBody.appendChild(newRow);
 
                 // add equipment to borrowing list
-                borrowingList.push({ name: equipment['name'],
+                borrowingList.push({ id: equipment['id'],
+                                     name: equipment['name'],
+                                     specification: equipment['specification'],
+                                     description: equipment['description'],
                                      quantity: 1 });
 
                 // notification
-                blTimeoutID = showNotification('#borrowing-list-notification', `ADDED ${equipment['name']}`, blTimeoutID);
+                let notificationText = `ADDED ${equipment['name']}`;
+                notificationText += equipment['specification'] ? ` (${equipment['specification']})` : '';
+                notificationText += equipment['description'] ? `, ${equipment['description']}` : '';
+                blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
 
-                console.log(`ADDED ${equipment['name']}`);
+                console.log(notificationText);
             })
 
-            // Append image and name to card
+            // Append image, name, specification, and description to card
             equipmentCard.appendChild(img);
             equipmentCard.appendChild(name);
+            if (specification.textContent) {
+                equipmentCard.appendChild(specification);
+            }
+            if (description.textContent) {
+                equipmentCard.appendChild(description);
+            }
             equipmentCard.appendChild(btnBorrow);
 
             // Append the card to the container
@@ -177,7 +214,7 @@ function showNotification(element, text, timeoutID) {
         clearTimeout(timeoutID);
     }
 
-    // Automatically hide the popup after 3 seconds
+    // Automatically hide the popup after 2 seconds
     return setTimeout(() => {
         notification.classList.remove('show-notification');
     }, 2000);

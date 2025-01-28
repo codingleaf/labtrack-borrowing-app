@@ -7,6 +7,10 @@ form {
     max-width: 30rem;
     flex: 1;
     align-items: center;
+    overflow-y: scroll;
+    padding-top: 0.6rem;
+    padding-right: 0.8rem;
+    padding-left: 0.1rem;
 }
 
 .field {
@@ -27,7 +31,7 @@ label {
     font-size: 0.8rem;
 }
 
-input {
+input, select {
     background-color: transparent;
     padding: 0.3rem 1rem;
     border: 2px solid #808080;

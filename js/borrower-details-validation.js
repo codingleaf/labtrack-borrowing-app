@@ -19,6 +19,15 @@ export function validateForm() {
         hasErrors = true;
     }
 
+    // Middle Initial Validation
+    const middleInitial = document.getElementById('middle-initial').value.trim();
+    const middleInitialError = document.getElementById('middle-initial-error');
+    if (middleInitial && middleInitial.length > 5) {
+        middleInitialError.textContent = "Middle initial must not exceed 5 characters.";
+        middleInitialError.classList.add('error-visible');
+        hasErrors = true;
+    }
+
     // Last Name Validation
     const lastName = document.getElementById('last-name').value.trim();
     const lastNameError = document.getElementById('last-name-error');
@@ -59,6 +68,50 @@ export function validateForm() {
     } else if (!/^\d{7,15}$/.test(contactNo)) {
         contactNoError.textContent = "Please enter a valid contact number (7 to 15 digits).";
         contactNoError.classList.add('error-visible');
+        hasErrors = true;
+    }
+
+    // Department Validation
+    const department = document.getElementById('department').value.trim();
+    const departmentError = document.getElementById('department-error');
+    if (!department) {
+        departmentError.textContent = "Department is required.";
+        departmentError.classList.add('error-visible');
+        hasErrors = true;
+    } else if (department.length > 100) {
+        departmentError.textContent = "Department must not exceed 100 characters.";
+        departmentError.classList.add('error-visible');
+        hasErrors = true;
+    }
+
+    // Designation Validation
+    const designation = document.getElementById('designation').value;
+    const designationError = document.getElementById('designation-error');
+    if (!designation) {
+        designationError.textContent = "Designation is required.";
+        designationError.classList.add('error-visible');
+        hasErrors = true;
+    }
+
+    // Course Details Validation
+    const courseDetails = document.getElementById('course-details').value.trim();
+    const courseDetailsError = document.getElementById('course-details-error');
+    if (courseDetails && courseDetails.length > 50) {
+        courseDetailsError.textContent = "Course details must not exceed 50 characters.";
+        courseDetailsError.classList.add('error-visible');
+        hasErrors = true;
+    }
+
+    // Subject Validation
+    const subject = document.getElementById('subject').value.trim();
+    const subjectError = document.getElementById('subject-error');
+    if (!subject) {
+        subjectError.textContent = "Subject is required.";
+        subjectError.classList.add('error-visible');
+        hasErrors = true;
+    } else if (subject.length > 100) {
+        subjectError.textContent = "Subject must not exceed 100 characters.";
+        subjectError.classList.add('error-visible');
         hasErrors = true;
     }
 

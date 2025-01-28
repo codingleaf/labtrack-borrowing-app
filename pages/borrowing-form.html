@@ -46,6 +46,12 @@
                 </div>
                 
                 <div class="field">
+                    <label>Middle Initial</label>
+                    <input type="text" id="middle-initial" placeholder="e.g. J." novalidate>
+                    <span class="error-message" id="middle-initial-error"></span>
+                </div>
+                
+                <div class="field">
                     <label>Last Name</label>
                     <input type="text" id="last-name" placeholder="e.g. Doe" novalidate>
                     <span class="error-message" id="last-name-error"></span>
@@ -62,6 +68,34 @@
                     <input type="text" id="contact-number" placeholder="e.g. 09123456789" novalidate>
                     <span class="error-message" id="contact-number-error"></span>
                 </div>
+                
+                <div class="field">
+                    <label>Department</label>
+                    <input type="text" id="department" placeholder="e.g. Nursing" novalidate>
+                    <span class="error-message" id="department-error"></span>
+                </div>
+                
+                <div class="field">
+                    <label>Designation</label>
+                    <select id="designation">
+                        <option value="1">Student</option>
+                        <option value="2">Faculty</option>
+                    </select>
+                    <span class="error-message" id="designation-error"></span>
+                </div>
+                
+                <div class="field">
+                    <label>Course Details</label>
+                    <input type="text" id="course-details" placeholder="e.g. BSN-4A" novalidate>
+                    <span class="error-message" id="course-details-error"></span>
+                </div>
+                
+                <div class="field">
+                    <label>Subject</label>
+                    <input type="text" id="subject" placeholder="e.g. Research" novalidate>
+                    <span class="error-message" id="subject-error"></span>
+                </div>
+                
                 <button id="btn-validate-form">Next</button>
             </form>
             <p>1/2</p>
@@ -113,22 +147,24 @@
                     </thead>
                     <tbody>
                         <!-- Dynamically populated -->
-                         <tr id="row-template" class="hidden">
-                            <td>
-                                <div class="equipment">
-                                    <img class="equipment-image" src="../assets/icons/icon-labtrack.png">
-                                    <h4 class="equipment-name">Equipment Name</h4>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="spinbox">
-                                    <button class="spinbox-increment">+</button>
-                                    <input type="text" class="spinbox-input" value="1" min="1" max="999">
-                                    <button class="spinbox-decrement">-</button>
-                                </div>
-                            </td>
-                            <td><button type="button" class="delete"><img src="../assets/icons/icon-x.png" alt="x icon"></button></td>
-                         </tr>
+                        <tr id="row-template" class="hidden">
+                        <td>
+                            <div class="equipment">
+                                <img class="equipment-image" src="../assets/icons/icon-labtrack.png">
+                                <h4 class="equipment-name">Equipment Name</h4>
+                                <p class="equipment-specification">Specification</p>
+                                <p class="equipment-description">Description</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="spinbox">
+                                <button class="spinbox-increment">+</button>
+                                <input type="text" class="spinbox-input" value="1" min="1" max="999">
+                                <button class="spinbox-decrement">-</button>
+                            </div>
+                        </td>
+                        <td><button type="button" class="delete"><img src="../assets/icons/icon-x.png" alt="x icon"></button></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -4,503 +4,503 @@
     "name": "Alcohol Burner",
     "specification": "",
     "description": "Glass with metal cap",
-    "image": "placeholder.jpg"
+    "image": "Alcohol Burner.png"
   },
   {
     "id": 2,
     "name": "Aspirator",
     "specification": "",
     "description": "Rubber",
-    "image": "placeholder.jpg"
+    "image": "Aspirator.png"
   },
   {
     "id": 3,
     "name": "Atomic Molecular Model Kit",
     "specification": "",
     "description": "Ball and Stick Model",
-    "image": "placeholder.jpg"
+    "image": "Atomic Molecular Model Kit.png"
   },
   {
     "id": 5,
     "name": "Balance",
     "specification": "",
     "description": "Analytical-Digital",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 6,
     "name": "Balance",
     "specification": "",
     "description": "Platform",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 7,
     "name": "Balance",
     "specification": "",
     "description": "Triple Beam",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 8,
     "name": "Basin",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Basin.png"
   },
   {
     "id": 9,
     "name": "Batwing",
     "specification": "For Bunsen Burner",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Batwing.png"
   },
   {
     "id": 10,
     "name": "Beaker",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 11,
     "name": "Beaker",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 12,
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 13,
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 14,
     "name": "Beaker",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 15,
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 16,
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 17,
     "name": "Borers",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Borers.png"
   },
   {
     "id": 18,
     "name": "Bosshead clamp",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Bosshead clamp.png"
   },
   {
     "id": 19,
     "name": "Bunsen Burner",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Bunsen Burner.png"
   },
   {
     "id": 20,
     "name": "Burette",
     "specification": "",
     "description": "Amber glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
   },
   {
     "id": 21,
     "name": "Burette",
     "specification": "Acid",
     "description": "Clear glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
   },
   {
     "id": 22,
     "name": "Burette",
     "specification": "Base",
     "description": "Clear glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
   },
   {
     "id": 23,
     "name": "Calorimeter",
     "specification": "",
     "description": "Stainless",
-    "image": "placeholder.jpg"
+    "image": "Calorimeter.png"
   },
   {
     "id": 24,
     "name": "Centrifuge tube",
     "specification": "",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Centrifuge tube.png"
   },
   {
     "id": 25,
     "name": "Clamp",
     "specification": "For Burette",
     "description": "Double",
-    "image": "placeholder.jpg"
+    "image": "Clamp.png"
   },
   {
     "id": 26,
     "name": "Clamp",
     "specification": "Universal",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Clamp.png"
   },
   {
     "id": 27,
     "name": "Condenser",
     "specification": "",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Condenser.png"
   },
   {
     "id": 28,
     "name": "Crucible",
     "specification": "With cover",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Crucible.png"
   },
   {
     "id": 29,
     "name": "Cylinder",
     "specification": "Est. Cap. 1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Cylinder.png"
   },
   {
     "id": 30,
     "name": "Distilling flask",
     "specification": "250 mL cap.",
     "description": "Glass, China",
-    "image": "placeholder.jpg"
+    "image": "Distilling flask.png"
   },
   {
     "id": 31,
     "name": "Dropping bottle",
     "specification": "",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Dropping bottle.png"
   },
   {
     "id": 32,
     "name": "Erlenmeyer flask",
     "specification": "125 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 33,
     "name": "Erlenmeyer flask",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 34,
     "name": "Erlenmeyer flask",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 35,
     "name": "Erlenmeyer flask",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 36,
     "name": "Erlenmeyer flask",
     "specification": "2000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 37,
     "name": "Evaporating dish",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Evaporating dish.png"
   },
   {
     "id": 38,
     "name": "Forceps",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Forceps.png"
   },
   {
     "id": 39,
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Funnel.png"
   },
   {
     "id": 40,
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Funnel.png"
   },
   {
     "id": 41,
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 42,
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 43,
     "name": "Graduated cylinder",
     "specification": "50 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 44,
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 45,
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 46,
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 47,
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 48,
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: National",
-    "image": "placeholder.jpg"
+    "image": "Hot Plate.png"
   },
   {
     "id": 49,
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: Hanabishi",
-    "image": "placeholder.jpg"
+    "image": "Hot Plate.png"
   },
   {
     "id": 50,
     "name": "Iron ring",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Iron ring.png"
   },
   {
     "id": 51,
     "name": "Iron stand",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Iron stand.png"
   },
   {
     "id": 52,
     "name": "Masses",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Masses.png"
   },
   {
     "id": 53,
     "name": "Mortar and pestle",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Mortar and pestle.png"
   },
   {
     "id": 54,
     "name": "Petri dish",
     "specification": "With cover",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Petri dish.png"
   },
   {
     "id": 55,
     "name": "Petri dish",
     "specification": "Without cover",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Petri dish.png"
   },
   {
     "id": 56,
     "name": "pH Meter",
     "specification": "",
     "description": "Brand: Suntex",
-    "image": "placeholder.jpg"
+    "image": "pH Meter.png"
   },
   {
     "id": 57,
     "name": "Pipestem triangle",
     "specification": "",
     "description": "Metal frame with ceramic",
-    "image": "placeholder.jpg"
+    "image": "Pipestem triangle.png"
   },
   {
     "id": 58,
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 59,
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 60,
     "name": "Pipette",
     "specification": "5.0 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 61,
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 62,
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 63,
     "name": "Pipette",
     "specification": "1 x 1/10",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 64,
     "name": "Pipette",
     "specification": "Single channel",
     "description": "Adjustable",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 65,
     "name": "Spatula",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Spatula.png"
   },
   {
     "id": 66,
     "name": "Spatula",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Spatula.png"
   },
   {
     "id": 67,
     "name": "Stirring rod",
     "specification": "",
     "description": "Glass, assorted lengths",
-    "image": "placeholder.jpg"
+    "image": "Stirring rod.png"
   },
   {
     "id": 68,
     "name": "Stirring rod",
     "specification": "6mm x 75 cm",
     "description": "Glass, uncut",
-    "image": "placeholder.jpg"
+    "image": "Stirring rod.png"
   },
   {
     "id": 69,
     "name": "Syringe",
     "specification": "50 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Syringe.png"
   },
   {
     "id": 70,
     "name": "Test tube",
     "specification": "4 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 71,
     "name": "Test tube",
     "specification": "15 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 72,
     "name": "Test tube",
     "specification": "25 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 73,
     "name": "Test tube",
     "specification": "60 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   }
 ]

@@ -5,10 +5,10 @@
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     border: 2px solid var(--primary);
-    white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+    width: 15rem;
 }
 
 .show-notification {

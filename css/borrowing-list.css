@@ -63,6 +63,10 @@ td {
     table-layout: fixed;
 }
 
+.borrowing-list-row p {
+    font-size: 0.8rem;
+}
+
 #btn-confirm {
     padding: 0.2rem 2rem;
     border-radius: 2rem;

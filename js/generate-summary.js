@@ -21,8 +21,12 @@ export function generateSummary(borrowingList) {
     const summaryBl = document.querySelector('#equipment-list');
     removeAllChildNodes(summaryBl);
     borrowingList.forEach(equipment => {
+        let summaryText = `${equipment['quantity']} x ${equipment['name']}`;
+        summaryText += equipment['specification'] ? ` (${equipment['specification']})` : '';
+        summaryText += equipment['description'] ? `, ${equipment['description']}` : '';
+
         const summaryEquipment = document.createElement('li');
-        summaryEquipment.textContent = `${equipment['name']} (${equipment['quantity']})`;
+        summaryEquipment.textContent = summaryText;
         summaryBl.appendChild(summaryEquipment);
     })
 
@@ -35,7 +39,7 @@ export function generateSummary(borrowingList) {
         "lastName": lastName,
         "email": email,
         "contactNumber": contactNumber,
-        "borrowingList": borrowingList
+        "borrowingList": borrowingList,
     }
     
     console.log(summary);
