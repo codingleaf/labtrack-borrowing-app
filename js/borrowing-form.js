@@ -69,7 +69,6 @@ async function loadEquipment() {
                 // don't add if item is already in the borrowing list
                 if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
                     blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
-                    console.log('ITEM HAS ALREADY BEEN ADDED!')
                     return;
                 }
 
@@ -104,7 +103,6 @@ async function loadEquipment() {
                         borrowingList.splice(index, 1);
                     }
                     newRow.remove();
-                    console.log(`REMOVED ${equipment['name']}`);
                 })
 
                 // remove id
@@ -135,8 +133,6 @@ async function loadEquipment() {
                 notificationText += equipment['specification'] ? ` (${equipment['specification']})` : '';
                 notificationText += equipment['description'] ? `, ${equipment['description']}` : '';
                 blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
-
-                console.log(notificationText);
             })
 
             // Append image, name, specification, and description to card

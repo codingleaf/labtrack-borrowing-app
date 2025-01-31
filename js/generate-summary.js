@@ -10,6 +10,7 @@ export function generateSummary(borrowingList) {
     const department = document.querySelector('#department').value;
     const designationDropdown = document.querySelector('#designation');
     const designation = designationDropdown.options[designationDropdown.selectedIndex].text;
+    const designationID = designationDropdown.value;
     const courseDetails = document.querySelector('#course-details').value;
     const subject = document.querySelector('#subject').value;
 
@@ -45,15 +46,22 @@ export function generateSummary(borrowingList) {
     const borrowingID = generateUUID();
 
     const summary = {
-        "borrowingID": borrowingID,
-        "firstName": firstName,
-        "lastName": lastName,
-        "email": email,
-        "contactNumber": contactNumber,
-        "borrowingList": borrowingList,
+        "id": borrowingID,
+        "fn": firstName,
+        "mi": middleInitial,
+        "ln": lastName,
+        "em": email,
+        "cn": contactNumber,
+        "dept": department,
+        "des": designationID,
+        "subj": subject,
+        "bl": borrowingList.map(equipment => `${equipment.id}:${equipment.quantity}`)
+    };
+
+    if (designationID === 1) {
+        summary['cd'] = courseDetails;
     }
     
-    console.log(summary);
     return summary;
 }
 
