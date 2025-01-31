@@ -236,7 +236,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
     });
-    
+
+    const designationInput = document.querySelector('#designation');
+    const courseDetailsField = document.querySelector('#course-details-field');
+    // Hide course details field if designation is Faculty
+    const toggleCourseDetails = () => {
+        if (designationInput.value !== "1") { 
+            courseDetailsField.classList.add('hidden');
+        } else {
+            courseDetailsField.classList.remove('hidden');
+        }
+    }
+    toggleCourseDetails(); // run on page load
+    designationInput.addEventListener('change', toggleCourseDetails);
+
     // Validate Borrower Details Form
     const btnValidateForm = document.querySelector('#btn-validate-form');
     btnValidateForm.addEventListener('click', () => {

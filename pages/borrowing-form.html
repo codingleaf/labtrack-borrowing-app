@@ -39,43 +39,43 @@
                 <div></div>
             </div>
             <form>
-                <div class="field">
+                <div id="first-name-field" class="field">
                     <label>First Name</label>
                     <input type="text" id="first-name" placeholder="e.g. John" novalidate>
                     <span class="error-message" id="first-name-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="middle-inital-field" class="field">
                     <label>Middle Initial</label>
                     <input type="text" id="middle-initial" placeholder="e.g. J." novalidate>
                     <span class="error-message" id="middle-initial-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="last-name-field" class="field">
                     <label>Last Name</label>
                     <input type="text" id="last-name" placeholder="e.g. Doe" novalidate>
                     <span class="error-message" id="last-name-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="email-field" class="field">
                     <label>Email</label>
                     <input type="text" id="email" placeholder="e.g. john.doe@example.com" novalidate>
                     <span class="error-message" id="email-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="contact-number-field" class="field">
                     <label>Contact No.</label>
                     <input type="text" id="contact-number" placeholder="e.g. 09123456789" novalidate>
                     <span class="error-message" id="contact-number-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="department-field" class="field">
                     <label>Department</label>
                     <input type="text" id="department" placeholder="e.g. Nursing" novalidate>
                     <span class="error-message" id="department-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="designation-field" class="field">
                     <label>Designation</label>
                     <select id="designation">
                         <option value="1">Student</option>
@@ -84,13 +84,13 @@
                     <span class="error-message" id="designation-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="course-details-field" class="field hidden">
                     <label>Course Details</label>
                     <input type="text" id="course-details" placeholder="e.g. BSN-4A" novalidate>
                     <span class="error-message" id="course-details-error"></span>
                 </div>
                 
-                <div class="field">
+                <div id="subject-field" class="field">
                     <label>Subject</label>
                     <input type="text" id="subject" placeholder="e.g. Research" novalidate>
                     <span class="error-message" id="subject-error"></span>
@@ -187,9 +187,14 @@
                     <div id="summary-bd-content">
                         <div class="row-header">
                             <h3>First Name: <span id="summary-fn"></span></h3>
+                            <h3>Middle Initial: <span id="summary-mi"></span></h3>
                             <h3>Last Name: <span id="summary-ln"></span></h3>
                             <h3>Email: <span id="summary-email"></span></h3>
                             <h3>Contact No.: <span id="summary-contact"></span></h3>
+                            <h3>Department: <span id="summary-department"></span></h3>
+                            <h3>Designation: <span id="summary-designation"></span></h3>
+                            <h3>Course Details: <span id="summary-course"></span></h3>
+                            <h3>Subject: <span id="summary-subject"></span></h3>
                         </div>
                     </div>
                 </div>

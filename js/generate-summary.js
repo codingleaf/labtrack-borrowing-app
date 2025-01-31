@@ -3,20 +3,31 @@
 export function generateSummary(borrowingList) {
     // Borrower Details
     const firstName = document.querySelector('#first-name').value;
+    const middleInitial = document.querySelector('#middle-initial').value;
     const lastName = document.querySelector('#last-name').value;
     const email = document.querySelector('#email').value;
     const contactNumber = document.querySelector('#contact-number').value;
+    const department = document.querySelector('#department').value;
+    const designationDropdown = document.querySelector('#designation');
+    const designation = designationDropdown.options[designationDropdown.selectedIndex].text;
+    const courseDetails = document.querySelector('#course-details').value;
+    const subject = document.querySelector('#subject').value;
+
+    document.querySelector('#summary-fn').textContent = firstName;
+    document.querySelector('#summary-mi').textContent = middleInitial;
+    document.querySelector('#summary-ln').textContent = lastName;
+    document.querySelector('#summary-email').textContent = email;
+    document.querySelector('#summary-contact').textContent = contactNumber;
+    document.querySelector('#summary-department').textContent = department;
+    document.querySelector('#summary-designation').textContent = designation;
+    document.querySelector('#summary-course').textContent = courseDetails;
+    document.querySelector('#summary-subject').textContent = subject;
 
     const spinboxes = [...document.querySelectorAll('.spinbox > input')];
     spinboxes.shift() // remove first element (from row template)
     spinboxes.forEach((spinbox, index) => {
         borrowingList[index]['quantity'] = spinbox.value;
     })
-
-    document.querySelector('#summary-fn').textContent = firstName;
-    document.querySelector('#summary-ln').textContent = lastName;
-    document.querySelector('#summary-email').textContent = email;
-    document.querySelector('#summary-contact').textContent = contactNumber;
 
     const summaryBl = document.querySelector('#equipment-list');
     removeAllChildNodes(summaryBl);
