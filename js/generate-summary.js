@@ -58,8 +58,13 @@ export function generateSummary(borrowingList) {
         "bl": borrowingList.map(equipment => `${equipment.id}:${equipment.quantity}`)
     };
 
+    const courseDetailsElement = document.querySelector('#summary-course').closest('h3');
     if (parseInt(designationID) === 1) {
         summary['cd'] = courseDetails;
+        courseDetailsElement.classList.remove('hidden');
+    }
+    else {
+        courseDetailsElement.classList.add('hidden');
     }
     console.log(summary);
     return summary;
