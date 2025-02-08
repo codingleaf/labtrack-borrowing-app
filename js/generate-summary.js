@@ -58,10 +58,10 @@ export function generateSummary(borrowingList) {
         "bl": borrowingList.map(equipment => `${equipment.id}:${equipment.quantity}`)
     };
 
-    if (designationID === 1) {
+    if (parseInt(designationID) === 1) {
         summary['cd'] = courseDetails;
     }
-    
+    console.log(summary);
     return summary;
 }
 
