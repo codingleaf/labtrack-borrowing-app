@@ -2,7 +2,7 @@
 
 export function validateForm() {
     // Clear all previous errors
-    document.querySelectorAll('.error-message').forEach(error => error.classList.remove('error-visible'));
+    document.querySelectorAll('.error-message').forEach(error => error.classList.add('hidden'));
 
     let hasErrors = false;
 
@@ -11,11 +11,11 @@ export function validateForm() {
     const firstNameError = document.getElementById('first-name-error');
     if (!firstName) {
         firstNameError.textContent = "First name is required.";
-        firstNameError.classList.add('error-visible');
+        firstNameError.classList.remove('hidden');
         hasErrors = true;
     } else if (firstName.length > 50) {
         firstNameError.textContent = "First name must not exceed 50 characters.";
-        firstNameError.classList.add('error-visible');
+        firstNameError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -24,7 +24,7 @@ export function validateForm() {
     const middleInitialError = document.getElementById('middle-initial-error');
     if (middleInitial && middleInitial.length > 5) {
         middleInitialError.textContent = "Middle initial must not exceed 5 characters.";
-        middleInitialError.classList.add('error-visible');
+        middleInitialError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -33,11 +33,11 @@ export function validateForm() {
     const lastNameError = document.getElementById('last-name-error');
     if (!lastName) {
         lastNameError.textContent = "Last name is required.";
-        lastNameError.classList.add('error-visible');
+        lastNameError.classList.remove('hidden');
         hasErrors = true;
     } else if (lastName.length > 50) {
         lastNameError.textContent = "Last name must not exceed 50 characters.";
-        lastNameError.classList.add('error-visible');
+        lastNameError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -46,15 +46,15 @@ export function validateForm() {
     const emailError = document.getElementById('email-error');
     if (!email) {
         emailError.textContent = "Email is required.";
-        emailError.classList.add('error-visible');
+        emailError.classList.remove('hidden');
         hasErrors = true;
     } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        emailError.textContent = "Please enter a valid email address.";
-        emailError.classList.add('error-visible');
+        emailError.textContent = "Please enter a valid email removeress.";
+        emailError.classList.remove('hidden');
         hasErrors = true;
     } else if (email.length > 320) {
         emailError.textContent = "Email must not exceed 320 characters.";
-        emailError.classList.add('error-visible');
+        emailError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -63,11 +63,11 @@ export function validateForm() {
     const contactNoError = document.getElementById('contact-number-error');
     if (!contactNo) {
         contactNoError.textContent = "Contact number is required.";
-        contactNoError.classList.add('error-visible');
+        contactNoError.classList.remove('hidden');
         hasErrors = true;
     } else if (!/^\d{7,15}$/.test(contactNo)) {
         contactNoError.textContent = "Please enter a valid contact number (7 to 15 digits).";
-        contactNoError.classList.add('error-visible');
+        contactNoError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -76,11 +76,11 @@ export function validateForm() {
     const departmentError = document.getElementById('department-error');
     if (!department) {
         departmentError.textContent = "Department is required.";
-        departmentError.classList.add('error-visible');
+        departmentError.classList.remove('hidden');
         hasErrors = true;
     } else if (department.length > 100) {
         departmentError.textContent = "Department must not exceed 100 characters.";
-        departmentError.classList.add('error-visible');
+        departmentError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -89,7 +89,7 @@ export function validateForm() {
     const designationError = document.getElementById('designation-error');
     if (!designation) {
         designationError.textContent = "Designation is required.";
-        designationError.classList.add('error-visible');
+        designationError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -98,7 +98,7 @@ export function validateForm() {
     const courseDetailsError = document.getElementById('course-details-error');
     if (courseDetails && courseDetails.length > 50) {
         courseDetailsError.textContent = "Course details must not exceed 50 characters.";
-        courseDetailsError.classList.add('error-visible');
+        courseDetailsError.classList.remove('hidden');
         hasErrors = true;
     }
 
@@ -107,11 +107,11 @@ export function validateForm() {
     const subjectError = document.getElementById('subject-error');
     if (!subject) {
         subjectError.textContent = "Subject is required.";
-        subjectError.classList.add('error-visible');
+        subjectError.classList.remove('hidden');
         hasErrors = true;
     } else if (subject.length > 100) {
         subjectError.textContent = "Subject must not exceed 100 characters.";
-        subjectError.classList.add('error-visible');
+        subjectError.classList.remove('hidden');
         hasErrors = true;
     }
 

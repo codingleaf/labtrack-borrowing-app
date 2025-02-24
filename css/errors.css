@@ -2,11 +2,5 @@
 .error-message {
     color: #E53232;
     font-size: 0.75rem;
-    display: block;
-    visibility: hidden;
-}
-
-.error-visible {
-    visibility: visible;
 }
 /*****/
