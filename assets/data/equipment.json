@@ -1,506 +1,866 @@
 [
   {
     "id": 1,
+    "category": "Chemistry",
     "name": "Alcohol Burner",
     "specification": "",
     "description": "Glass with metal cap",
-    "image": "placeholder.jpg"
+    "image": "Alcohol Burner.png"
+  },
+  {
+    "id": 74,
+    "category": "Physics",
+    "name": "Amp & Voltmeter",
+    "specification": "",
+    "description": "Plastic base",
+    "image": "Amp & Voltmeter.png"
+  },
+  {
+    "id": 75,
+    "category": "Physics",
+    "name": "Area & Volume explanator",
+    "specification": "",
+    "description": "",
+    "image": "Area & Volume explanator.png"
   },
   {
     "id": 2,
+    "category": "Chemistry",
     "name": "Aspirator",
     "specification": "",
     "description": "Rubber",
-    "image": "placeholder.jpg"
+    "image": "Aspirator.png"
   },
   {
     "id": 3,
+    "category": "Chemistry",
     "name": "Atomic Molecular Model Kit",
     "specification": "",
     "description": "Ball and Stick Model",
-    "image": "placeholder.jpg"
+    "image": "Atomic Molecular Model Kit.png"
+  },
+  {
+    "id": 4,
+    "category": "Chemistry",
+    "name": "Balance",
+    "specification": "",
+    "description": "Analytical",
+    "image": "Balance.png"
   },
   {
     "id": 5,
+    "category": "Chemistry",
     "name": "Balance",
     "specification": "",
     "description": "Analytical-Digital",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 6,
+    "category": "Chemistry",
     "name": "Balance",
     "specification": "",
     "description": "Platform",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 7,
+    "category": "Chemistry",
     "name": "Balance",
     "specification": "",
     "description": "Triple Beam",
-    "image": "placeholder.jpg"
+    "image": "Balance.png"
   },
   {
     "id": 8,
+    "category": "Chemistry",
     "name": "Basin",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Basin.png"
   },
   {
     "id": 9,
+    "category": "Chemistry",
     "name": "Batwing",
     "specification": "For Bunsen Burner",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Batwing.png"
   },
   {
     "id": 10,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 11,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 12,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 13,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 14,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 15,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 16,
+    "category": "Chemistry",
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Beaker.png"
   },
   {
     "id": 17,
+    "category": "Chemistry",
     "name": "Borers",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Borers.png"
   },
   {
     "id": 18,
+    "category": "Chemistry",
     "name": "Bosshead clamp",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Bosshead clamp.png"
   },
   {
     "id": 19,
+    "category": "Chemistry",
     "name": "Bunsen Burner",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Bunsen Burner.png"
   },
   {
     "id": 20,
+    "category": "Chemistry",
     "name": "Burette",
     "specification": "",
     "description": "Amber glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
   },
   {
     "id": 21,
+    "category": "Chemistry",
     "name": "Burette",
     "specification": "Acid",
     "description": "Clear glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
   },
   {
     "id": 22,
+    "category": "Chemistry",
     "name": "Burette",
     "specification": "Base",
     "description": "Clear glass",
-    "image": "placeholder.jpg"
+    "image": "Burette.png"
+  },
+  {
+    "id": 76,
+    "category": "Physics",
+    "name": "Caliper",
+    "specification": "Micrometer",
+    "description": "Stainless steel",
+    "image": "Caliper.png"
+  },
+  {
+    "id": 77,
+    "category": "Physics",
+    "name": "Caliper",
+    "specification": "Vernier",
+    "description": "Stainless steel",
+    "image": "Caliper.png"
+  },
+  {
+    "id": 78,
+    "category": "Physics",
+    "name": "Caliper",
+    "specification": "Disposable",
+    "description": "Plastic",
+    "image": "Caliper.png"
   },
   {
     "id": 23,
+    "category": "Chemistry",
     "name": "Calorimeter",
     "specification": "",
     "description": "Stainless",
-    "image": "placeholder.jpg"
+    "image": "Calorimeter.png"
   },
   {
     "id": 24,
+    "category": "Chemistry",
     "name": "Centrifuge tube",
     "specification": "",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Centrifuge tube.png"
+  },
+  {
+    "id": 80,
+    "category": "Physics",
+    "name": "Circuit board kit and accessories",
+    "specification": "",
+    "description": "Plastic base with metal rod",
+    "image": "Circuit board kit and accessories.png"
+  },
+  {
+    "id": 79,
+    "category": "Physics",
+    "name": "Circular force apparatus",
+    "specification": "",
+    "description": "Circular metal with stand",
+    "image": "Circular force apparatus.png"
   },
   {
     "id": 25,
+    "category": "Chemistry",
     "name": "Clamp",
     "specification": "For Burette",
     "description": "Double",
-    "image": "placeholder.jpg"
+    "image": "Clamp.png"
   },
   {
     "id": 26,
+    "category": "Chemistry",
     "name": "Clamp",
     "specification": "Universal",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Clamp.png"
+  },
+  {
+    "id": 81,
+    "category": "Physics",
+    "name": "Compass (board)",
+    "specification": "",
+    "description": "Plastic",
+    "image": "Compass (board).png"
   },
   {
     "id": 27,
+    "category": "Chemistry",
     "name": "Condenser",
     "specification": "",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Condenser.png"
   },
   {
     "id": 28,
+    "category": "Chemistry",
     "name": "Crucible",
     "specification": "With cover",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Crucible.png"
   },
   {
     "id": 29,
+    "category": "Chemistry",
     "name": "Cylinder",
     "specification": "Est. Cap. 1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Cylinder.png"
   },
   {
     "id": 30,
+    "category": "Chemistry",
     "name": "Distilling flask",
     "specification": "250 mL cap.",
     "description": "Glass, China",
-    "image": "placeholder.jpg"
+    "image": "Distilling flask.png"
   },
   {
     "id": 31,
+    "category": "Chemistry",
     "name": "Dropping bottle",
     "specification": "",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Dropping bottle.png"
+  },
+  {
+    "id": 82,
+    "category": "Physics",
+    "name": "Dynamic cart",
+    "specification": "",
+    "description": "Plastic",
+    "image": "Dynamic cart.png"
+  },
+  {
+    "id": 83,
+    "category": "Physics",
+    "name": "Dynamic cart",
+    "specification": "",
+    "description": "Wooden",
+    "image": "Dynamic cart.png"
+  },
+  {
+    "id": 84,
+    "category": "Physics",
+    "name": "Electric motor kit",
+    "specification": "",
+    "description": "",
+    "image": "Electric motor kit.png"
+  },
+  {
+    "id": 85,
+    "category": "Physics",
+    "name": "Electricity distribution board",
+    "specification": "",
+    "description": "",
+    "image": "Electricity distribution board.png"
   },
   {
     "id": 32,
+    "category": "Chemistry",
     "name": "Erlenmeyer flask",
     "specification": "125 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 33,
+    "category": "Chemistry",
     "name": "Erlenmeyer flask",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 34,
+    "category": "Chemistry",
     "name": "Erlenmeyer flask",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 35,
+    "category": "Chemistry",
     "name": "Erlenmeyer flask",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 36,
+    "category": "Chemistry",
     "name": "Erlenmeyer flask",
     "specification": "2000 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Erlenmeyer flask.png"
   },
   {
     "id": 37,
+    "category": "Chemistry",
     "name": "Evaporating dish",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Evaporating dish.png"
   },
   {
     "id": 38,
+    "category": "Chemistry",
     "name": "Forceps",
     "specification": "",
     "description": "Stainless steel",
-    "image": "placeholder.jpg"
+    "image": "Forceps.png"
+  },
+  {
+    "id": 86,
+    "category": "Physics",
+    "name": "Free fall apparatus",
+    "specification": "",
+    "description": "",
+    "image": "Free fall apparatus.png"
   },
   {
     "id": 39,
+    "category": "Chemistry",
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Funnel.png"
   },
   {
     "id": 40,
+    "category": "Chemistry",
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Funnel.png"
+  },
+  {
+    "id": 87,
+    "category": "Physics",
+    "name": "Geoboard",
+    "specification": "",
+    "description": "Plastic",
+    "image": "Geoboard.png"
   },
   {
     "id": 41,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 42,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 43,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "50 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 44,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 45,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 46,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
   },
   {
     "id": 47,
+    "category": "Chemistry",
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Graduated cylinder.png"
+  },
+  {
+    "id": 88,
+    "category": "Physics",
+    "name": "Hanging mass",
+    "specification": "",
+    "description": "Wooden",
+    "image": "Hanging mass.png"
   },
   {
     "id": 48,
+    "category": "Chemistry",
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: National",
-    "image": "placeholder.jpg"
+    "image": "Hot Plate.png"
   },
   {
     "id": 49,
+    "category": "Chemistry",
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: Hanabishi",
-    "image": "placeholder.jpg"
+    "image": "Hot Plate.png"
+  },
+  {
+    "id": 89,
+    "category": "Physics",
+    "name": "Inclined plane",
+    "specification": "",
+    "description": "Wooden",
+    "image": "Inclined plane.png"
   },
   {
     "id": 50,
+    "category": "Chemistry",
     "name": "Iron ring",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Iron ring.png"
   },
   {
     "id": 51,
+    "category": "Chemistry",
     "name": "Iron stand",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Iron stand.png"
+  },
+  {
+    "id": 90,
+    "category": "Physics",
+    "name": "J-tube / U-tube",
+    "specification": "",
+    "description": "With wood support",
+    "image": "J-tube / U-tube.png"
+  },
+  {
+    "id": 91,
+    "category": "Physics",
+    "name": "Light box and optical kit",
+    "specification": "",
+    "description": "",
+    "image": "Light box and optical kit.png"
+  },
+  {
+    "id": 92,
+    "category": "Physics",
+    "name": "Liter container",
+    "specification": "",
+    "description": "Breakable plastic",
+    "image": "Liter container.png"
+  },
+  {
+    "id": 93,
+    "category": "Physics",
+    "name": "Magnet",
+    "specification": "Bar",
+    "description": "",
+    "image": "Magnet.png"
+  },
+  {
+    "id": 94,
+    "category": "Physics",
+    "name": "Magnet",
+    "specification": "Ring",
+    "description": "",
+    "image": "Magnet.png"
+  },
+  {
+    "id": 95,
+    "category": "Physics",
+    "name": "Magnet",
+    "specification": "Assorted sizes",
+    "description": "",
+    "image": "Magnet.png"
   },
   {
     "id": 52,
+    "category": "Chemistry",
     "name": "Masses",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Masses.png"
+  },
+  {
+    "id": 96,
+    "category": "Physics",
+    "name": "Metal balls",
+    "specification": "Assorted sizes",
+    "description": "",
+    "image": "Metal balls.png"
+  },
+  {
+    "id": 97,
+    "category": "Physics",
+    "name": "Meterstick",
+    "specification": "",
+    "description": "Plastic",
+    "image": "Meterstick.png"
+  },
+  {
+    "id": 98,
+    "category": "Physics",
+    "name": "Meterstick",
+    "specification": "",
+    "description": "Wooden",
+    "image": "Meterstick.png"
   },
   {
     "id": 53,
+    "category": "Chemistry",
     "name": "Mortar and pestle",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Mortar and pestle.png"
   },
   {
     "id": 54,
+    "category": "Chemistry",
     "name": "Petri dish",
     "specification": "With cover",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Petri dish.png"
   },
   {
     "id": 55,
+    "category": "Chemistry",
     "name": "Petri dish",
     "specification": "Without cover",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Petri dish.png"
   },
   {
     "id": 56,
+    "category": "Chemistry",
     "name": "pH Meter",
     "specification": "",
     "description": "Brand: Suntex",
-    "image": "placeholder.jpg"
+    "image": "pH Meter.png"
   },
   {
     "id": 57,
+    "category": "Chemistry",
     "name": "Pipestem triangle",
     "specification": "",
     "description": "Metal frame with ceramic",
-    "image": "placeholder.jpg"
+    "image": "Pipestem triangle.png"
   },
   {
     "id": 58,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 59,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 60,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "5.0 mL",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 61,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 62,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Plastic",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 63,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "1 x 1/10",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
   },
   {
     "id": 64,
+    "category": "Chemistry",
     "name": "Pipette",
     "specification": "Single channel",
     "description": "Adjustable",
-    "image": "placeholder.jpg"
+    "image": "Pipette.png"
+  },
+  {
+    "id": 99,
+    "category": "Physics",
+    "name": "Pulley",
+    "specification": "5-cm diameter",
+    "description": "Plastic",
+    "image": "Pulley.png"
+  },
+  {
+    "id": 100,
+    "category": "Physics",
+    "name": "Slotted masses",
+    "specification": "",
+    "description": "Metal with hook",
+    "image": "Slotted masses.png"
+  },
+  {
+    "id": 101,
+    "category": "Physics",
+    "name": "Slotted masses",
+    "specification": "",
+    "description": "With plastic casing",
+    "image": "Slotted masses.png"
   },
   {
     "id": 65,
+    "category": "Chemistry",
     "name": "Spatula",
     "specification": "",
     "description": "Metal",
-    "image": "placeholder.jpg"
+    "image": "Spatula.png"
   },
   {
     "id": 66,
+    "category": "Chemistry",
     "name": "Spatula",
     "specification": "",
     "description": "Ceramic",
-    "image": "placeholder.jpg"
+    "image": "Spatula.png"
+  },
+  {
+    "id": 102,
+    "category": "Physics",
+    "name": "Spring balance",
+    "specification": "",
+    "description": "Gram/Newton",
+    "image": "Spring balance.png"
   },
   {
     "id": 67,
+    "category": "Chemistry",
     "name": "Stirring rod",
     "specification": "",
     "description": "Glass, assorted lengths",
-    "image": "placeholder.jpg"
+    "image": "Stirring rod.png"
   },
   {
     "id": 68,
+    "category": "Chemistry",
     "name": "Stirring rod",
     "specification": "6mm x 75 cm",
     "description": "Glass, uncut",
-    "image": "placeholder.jpg"
+    "image": "Stirring rod.png"
   },
   {
     "id": 69,
+    "category": "Chemistry",
     "name": "Syringe",
     "specification": "50 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Syringe.png"
   },
   {
     "id": 70,
+    "category": "Chemistry",
     "name": "Test tube",
     "specification": "4 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 71,
+    "category": "Chemistry",
     "name": "Test tube",
     "specification": "15 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 72,
+    "category": "Chemistry",
     "name": "Test tube",
     "specification": "25 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
   },
   {
     "id": 73,
+    "category": "Chemistry",
     "name": "Test tube",
     "specification": "60 mL capacity",
     "description": "Glass",
-    "image": "placeholder.jpg"
+    "image": "Test tube.png"
+  },
+  {
+    "id": 103,
+    "category": "Physics",
+    "name": "Ticker timer",
+    "specification": "",
+    "description": "",
+    "image": "Ticker timer.png"
+  },
+  {
+    "id": 104,
+    "category": "Physics",
+    "name": "Triangle",
+    "specification": "Board, 30/60",
+    "description": "Plastic",
+    "image": "Triangle.png"
+  },
+  {
+    "id": 105,
+    "category": "Physics",
+    "name": "Triangle",
+    "specification": "Board, 45/45",
+    "description": "Plastic",
+    "image": "Triangle.png"
+  },
+  {
+    "id": 106,
+    "category": "Physics",
+    "name": "Tuning fork",
+    "specification": "",
+    "description": "Metal",
+    "image": "Tuning fork.png"
+  },
+  {
+    "id": 107,
+    "category": "Physics",
+    "name": "Weight holder",
+    "specification": "Small",
+    "description": "Metal",
+    "image": "Weight holder.png"
+  },
+  {
+    "id": 108,
+    "category": "Physics",
+    "name": "Weight holder",
+    "specification": "Big",
+    "description": "Metal",
+    "image": "Weight holder.png"
   }
 ]

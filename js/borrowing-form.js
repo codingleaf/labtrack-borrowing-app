@@ -18,6 +18,16 @@ let borrowingList = [];
 // Data Summary (For Generating QR Code)
 let qrData;
 
+function setEquipmentImage(imgElement, imageName) {
+    const imgPath = `../assets/images/${imageName}`;
+    const fallbackPath = '../assets/images/placeholder.jpg';
+
+    const testImage = new Image();
+    testImage.onload = () => imgElement.src = imgPath;
+    testImage.onerror = () => imgElement.src = fallbackPath;
+    testImage.src = imgPath;
+}
+
 // Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
     // Reference to the equipment container
@@ -45,10 +55,12 @@ async function loadEquipment() {
             // attach equipment id to the card 
             equipmentCard.setAttribute('data-id', equipment['id'])
 
+            // attach category id to the card
+            equipmentCard.setAttribute('data-category', equipment['category'])
+
             // Add image
             const img = document.createElement('img');
-            img.src = `../assets/images/${equipment['image']}`;
-            img.alt = equipment['name'];
+            setEquipmentImage(img, equipment['image']);
             
             // Add equipment name
             const name = document.createElement('h3');
@@ -149,33 +161,38 @@ async function loadEquipment() {
             // Append the card to the container
             equipmentContainer.appendChild(equipmentCard);
 
-            searchFilter();
+            applyFilters();
         });
     } catch (error) {
         console.error('Error loading equipment data:', error);
     }
 };
 
-function searchFilter() {
-    // Search Filter
+function applyFilters() {
+    // Search and Category Filter
     const searchInput = document.querySelector('#search-input');
+    const categoryFilter = document.querySelector('#filter-category');
     const equipmentCards = document.querySelectorAll('.equipment-card');
 
-    // Listen for input events on the search bar
-    searchInput.addEventListener('input', (event) => {
-        const searchText = event.target.value.toLowerCase();
+    function filterCards() {
+        const searchText = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
 
         equipmentCards.forEach((card) => {
             const cardName = card.querySelector('h3').textContent.toLowerCase();
-    
-            // Show or hide the card based on the search text
-            if (cardName.includes(searchText)) {
-                card.classList.remove('hidden'); // Show card
-            } else {
-                card.classList.add('hidden'); // Hide card
-            }
+            const cardCategory = card.getAttribute('data-category');
+            
+            const matchesSearch = cardName.includes(searchText);
+            const matchesCategory = selectedCategory === "" || cardCategory === selectedCategory;
+
+            // Show card if it matches both filters, otherwise hide it
+            card.classList.toggle('hidden', !(matchesSearch && matchesCategory));
         });
-    });
+    }
+
+    // Listen for input and change events
+    searchInput.addEventListener('input', filterCards);
+    categoryFilter.addEventListener('change', filterCards);
 }
 
 function previousPage(pages, currentPageIndex) {
