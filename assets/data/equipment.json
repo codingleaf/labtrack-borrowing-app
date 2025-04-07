@@ -40,14 +40,6 @@
     "image": "Atomic Molecular Model Kit.png"
   },
   {
-    "id": 4,
-    "category": "Chemistry",
-    "name": "Balance",
-    "specification": "",
-    "description": "Analytical",
-    "image": "Balance.png"
-  },
-  {
     "id": 5,
     "category": "Chemistry",
     "name": "Balance",
