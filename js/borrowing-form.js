@@ -28,145 +28,94 @@ function setEquipmentImage(imgElement, imageName) {
     testImage.src = imgPath;
 }
 
-// Function to fetch equipment data from JSON and load it
 async function loadEquipment() {
-    // Reference to the equipment container
     const equipmentContainer = document.querySelector('#equipment-container');
-
-    // Reference to the hidden row template for the borrowing list
     const rowTemplate = document.querySelector('#row-template');
-
-    // Reference to the borrowing list table
     const tableBody = document.querySelector('#borrowing-list-table > tbody');
+    const equipmentCardTemplate = document.querySelector('#equipment-card-template');
 
     try {
-        // Fetch equipment data from equipment.json
         const response = await fetch('../assets/data/equipment.json');
         if (!response.ok) {
             throw new Error('Failed to fetch equipment data');
         }
         equipmentData = await response.json();
 
-        // Loop through the data and create equipment cards
         equipmentData.forEach(equipment => {
-            const equipmentCard = document.createElement('div');
-            equipmentCard.classList.add('equipment-card');
+            // Clone the template content
+            const cardClone = equipmentCardTemplate.content.cloneNode(true);
+            const equipmentCard = cardClone.querySelector('.equipment-card');
 
-            // attach equipment id to the card 
-            equipmentCard.setAttribute('data-id', equipment['id'])
+            // Set data attributes
+            equipmentCard.setAttribute('data-id', equipment['id']);
+            equipmentCard.setAttribute('data-category', equipment['category']);
 
-            // attach category id to the card
-            equipmentCard.setAttribute('data-category', equipment['category'])
-
-            // Add image
-            const img = document.createElement('img');
+            // Set image
+            const img = equipmentCard.querySelector('img');
             setEquipmentImage(img, equipment['image']);
-            
-            // Add equipment name
-            const name = document.createElement('h3');
-            name.textContent = equipment['name'];
 
-            // Add equipment specification
-            const specification = document.createElement('p');
-            specification.textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
+            // Set text content
+            equipmentCard.querySelector('.equipment-name').textContent = equipment['name'];
+            equipmentCard.querySelector('.equipment-specification').textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
+            equipmentCard.querySelector('.equipment-description').textContent = equipment['description'] || '';
 
-            // Add equipment description
-            const description = document.createElement('p');
-            description.textContent = equipment['description'] ? equipment['description'] : '';
-
-            // Add borrow button
-            const btnBorrow = document.createElement('button');
-            btnBorrow.textContent = 'Borrow';
+            // Set up borrow button
+            const btnBorrow = equipmentCard.querySelector('.btn-borrow');
             btnBorrow.addEventListener('click', () => {
-                // don't add if item is already in the borrowing list
                 if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
                     blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
                     return;
                 }
 
-                // clone row template
                 const newRow = rowTemplate.cloneNode(true);
-                
-                // add image
-                const equipmentImage = newRow.querySelector('.equipment-image')
-                equipmentImage.src = img.src;
 
-                // add equipment name
-                const equipmentName = newRow.querySelector('.equipment-name');
-                equipmentName.textContent = equipment['name'];
+                newRow.querySelector('.equipment-image').src = img.src;
+                newRow.querySelector('.equipment-name').textContent = equipment['name'];
+                newRow.querySelector('.equipment-specification').textContent = equipment['specification'];
+                newRow.querySelector('.equipment-description').textContent = equipment['description'];
 
-                // add equipment specification
-                const equipmentSpecification = newRow.querySelector('.equipment-specification');
-                equipmentSpecification.textContent = equipment['specification'];
-
-                // add equipment description
-                const equipmentDescription = newRow.querySelector('.equipment-description');
-                equipmentDescription.textContent = equipment['description'];
-
-                // initialize spinbox
                 const spinbox = newRow.querySelector('.spinbox');
                 new Spinbox(spinbox);
 
-                // initialize delete button
                 const btnDelete = newRow.querySelector('button.delete');
                 btnDelete.addEventListener('click', () => {
-                    const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id'])
+                    const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
                     if (index > -1) {
                         borrowingList.splice(index, 1);
                     }
                     newRow.remove();
-                })
+                });
 
-                // remove id
                 newRow.removeAttribute('id');
                 newRow.removeAttribute('class');
-
-                // attach equipment id to the row
                 newRow.setAttribute('data-id', equipment['id']);
-
-                // unhide new row
                 newRow.classList.remove('hidden');
+                newRow.classList.add('borrowing-list-row');
 
-                // add class to each row
-                newRow.classList.add('borrowing-list-row')
-                
-                // append new row
                 tableBody.appendChild(newRow);
 
-                // add equipment to borrowing list
-                borrowingList.push({ id: equipment['id'],
-                                     name: equipment['name'],
-                                     specification: equipment['specification'],
-                                     description: equipment['description'],
-                                     quantity: 1 });
+                borrowingList.push({
+                    id: equipment['id'],
+                    name: equipment['name'],
+                    specification: equipment['specification'],
+                    description: equipment['description'],
+                    quantity: 1
+                });
 
-                // notification
                 let notificationText = `ADDED ${equipment['name']}`;
                 notificationText += equipment['specification'] ? ` (${equipment['specification']})` : '';
                 notificationText += equipment['description'] ? `, ${equipment['description']}` : '';
                 blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
-            })
+            });
 
-            // Append image, name, specification, and description to card
-            equipmentCard.appendChild(img);
-            equipmentCard.appendChild(name);
-            if (specification.textContent) {
-                equipmentCard.appendChild(specification);
-            }
-            if (description.textContent) {
-                equipmentCard.appendChild(description);
-            }
-            equipmentCard.appendChild(btnBorrow);
-
-            // Append the card to the container
-            equipmentContainer.appendChild(equipmentCard);
-
-            applyFilters();
+            equipmentContainer.appendChild(cardClone);
         });
+
+        applyFilters();
     } catch (error) {
         console.error('Error loading equipment data:', error);
     }
-};
+}
 
 function applyFilters() {
     // Search and Category Filter
