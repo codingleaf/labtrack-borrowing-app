@@ -9,9 +9,6 @@ import { generateQR } from './generate-qr.js';
 let blTimeoutID;
 let confirmTimeoutID;
 
-// EquipmentData
-let equipmentData;
-
 // Borrowing List
 let borrowingList = [];
 
@@ -33,89 +30,95 @@ async function loadEquipment() {
     const rowTemplate = document.querySelector('#row-template');
     const tableBody = document.querySelector('#borrowing-list-table > tbody');
     const equipmentCardTemplate = document.querySelector('#equipment-card-template');
-
+  
+    let equipmentData = [];
+  
     try {
-        const response = await fetch('../assets/data/equipment.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch equipment data');
-        }
-        equipmentData = await response.json();
-
-        equipmentData.forEach(equipment => {
-            // Clone the template content
-            const cardClone = equipmentCardTemplate.content.cloneNode(true);
-            const equipmentCard = cardClone.querySelector('.equipment-card');
-
-            // Set data attributes
-            equipmentCard.setAttribute('data-id', equipment['id']);
-            equipmentCard.setAttribute('data-category', equipment['category']);
-
-            // Set image
-            const img = equipmentCard.querySelector('img');
-            setEquipmentImage(img, equipment['image']);
-
-            // Set text content
-            equipmentCard.querySelector('.equipment-name').textContent = equipment['name'];
-            equipmentCard.querySelector('.equipment-specification').textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
-            equipmentCard.querySelector('.equipment-description').textContent = equipment['description'] || '';
-
-            // Set up borrow button
-            const btnBorrow = equipmentCard.querySelector('.btn-borrow');
-            btnBorrow.addEventListener('click', () => {
-                if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
-                    blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
-                    return;
-                }
-
-                const newRow = rowTemplate.cloneNode(true);
-
-                newRow.querySelector('.equipment-image').src = img.src;
-                newRow.querySelector('.equipment-name').textContent = equipment['name'];
-                newRow.querySelector('.equipment-specification').textContent = equipment['specification'];
-                newRow.querySelector('.equipment-description').textContent = equipment['description'];
-
-                const spinbox = newRow.querySelector('.spinbox');
-                new Spinbox(spinbox);
-
-                const btnDelete = newRow.querySelector('button.delete');
-                btnDelete.addEventListener('click', () => {
-                    const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
-                    if (index > -1) {
-                        borrowingList.splice(index, 1);
-                    }
-                    newRow.remove();
-                });
-
-                newRow.removeAttribute('id');
-                newRow.removeAttribute('class');
-                newRow.setAttribute('data-id', equipment['id']);
-                newRow.classList.remove('hidden');
-                newRow.classList.add('borrowing-list-row');
-
-                tableBody.appendChild(newRow);
-
-                borrowingList.push({
-                    id: equipment['id'],
-                    name: equipment['name'],
-                    specification: equipment['specification'],
-                    description: equipment['description'],
-                    quantity: 1
-                });
-
-                let notificationText = `ADDED ${equipment['name']}`;
-                notificationText += equipment['specification'] ? ` (${equipment['specification']})` : '';
-                notificationText += equipment['description'] ? `, ${equipment['description']}` : '';
-                blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
-            });
-
-            equipmentContainer.appendChild(cardClone);
-        });
-
-        applyFilters();
-    } catch (error) {
-        console.error('Error loading equipment data:', error);
+      // Fetch from Firestore
+      const doc = await firebase.firestore().collection("equipment_data").doc("equipment").get();
+      if (!doc.exists) throw new Error("No document found");
+  
+      const firestoreData = doc.data();
+      equipmentData = firestoreData.data || [];
+  
+    } catch (firebaseError) {
+      console.warn('⚠️ Firebase load failed, falling back to equipment.json:', firebaseError);
+  
+      try {
+        const localRes = await fetch('../assets/data/equipment.json');
+        if (!localRes.ok) throw new Error('Failed to fetch local equipment data');
+        equipmentData = await localRes.json();
+      } catch (localError) {
+        console.error('❌ Failed to load equipment from both Firebase and local:', localError);
+        return;
+      }
     }
-}
+  
+    // --- Render cards like before ---
+    equipmentData.forEach(equipment => {
+      const cardClone = equipmentCardTemplate.content.cloneNode(true);
+      const equipmentCard = cardClone.querySelector('.equipment-card');
+  
+      equipmentCard.setAttribute('data-id', equipment['id']);
+      equipmentCard.setAttribute('data-category', equipment['category']);
+  
+      const img = equipmentCard.querySelector('img');
+      setEquipmentImage(img, equipment['image']);
+  
+      equipmentCard.querySelector('.equipment-name').textContent = equipment['name'];
+      equipmentCard.querySelector('.equipment-specification').textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
+      equipmentCard.querySelector('.equipment-description').textContent = equipment['description'] || '';
+  
+      const btnBorrow = equipmentCard.querySelector('.btn-borrow');
+      btnBorrow.addEventListener('click', () => {
+        if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
+          blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
+          return;
+        }
+  
+        const newRow = rowTemplate.cloneNode(true);
+        newRow.querySelector('.equipment-image').src = img.src;
+        newRow.querySelector('.equipment-name').textContent = equipment['name'];
+        newRow.querySelector('.equipment-specification').textContent = equipment['specification'];
+        newRow.querySelector('.equipment-description').textContent = equipment['description'];
+  
+        const spinbox = newRow.querySelector('.spinbox');
+        new Spinbox(spinbox);
+  
+        const btnDelete = newRow.querySelector('button.delete');
+        btnDelete.addEventListener('click', () => {
+          const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
+          if (index > -1) borrowingList.splice(index, 1);
+          newRow.remove();
+        });
+  
+        newRow.removeAttribute('id');
+        newRow.removeAttribute('class');
+        newRow.setAttribute('data-id', equipment['id']);
+        newRow.classList.remove('hidden');
+        newRow.classList.add('borrowing-list-row');
+  
+        tableBody.appendChild(newRow);
+  
+        borrowingList.push({
+          id: equipment['id'],
+          name: equipment['name'],
+          specification: equipment['specification'],
+          description: equipment['description'],
+          quantity: 1
+        });
+  
+        let notificationText = `ADDED ${equipment['name']}`;
+        notificationText += equipment['specification'] ? ` (${equipment['specification']})` : '';
+        notificationText += equipment['description'] ? `, ${equipment['description']}` : '';
+        blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
+      });
+  
+      equipmentContainer.appendChild(cardClone);
+    });
+  
+    applyFilters();
+}  
 
 function applyFilters() {
     // Search and Category Filter
