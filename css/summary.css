@@ -47,6 +47,10 @@
     padding-right: 0.75rem;
 }
 
+#summary #summary-bd #summary-id-label {
+    font-weight: bold;
+}
+
 #summary span {
     font-weight: lighter;
     font-size: 1.1rem;

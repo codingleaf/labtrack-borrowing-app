@@ -204,12 +204,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const designationInput = document.querySelector('#designation');
     const courseDetailsField = document.querySelector('#course-details-field');
+    const idLabel = document.querySelector('#borrower-id-field > label')
     // Hide course details field if designation is Faculty
     const toggleCourseDetails = () => {
-        if (designationInput.value !== "1") { 
-            courseDetailsField.classList.add('hidden');
-        } else {
+        if (designationInput.value === "1") { 
             courseDetailsField.classList.remove('hidden');
+            idLabel.textContent = 'Student ID';
+        } else {
+            courseDetailsField.classList.add('hidden');
+            idLabel.textContent = 'Faculty ID';
         }
     }
     toggleCourseDetails(); // run on page load

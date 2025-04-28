@@ -46,6 +46,21 @@
                 <div></div>
             </div>
             <form>
+                <div id="designation-field" class="field">
+                    <label>Designation</label>
+                    <select id="designation">
+                        <option value="1">Student</option>
+                        <option value="2">Faculty</option>
+                    </select>
+                    <span class="error-message" id="designation-error"></span>
+                </div>
+
+                <div id="borrower-id-field" class="field">
+                    <label>ID</label>
+                    <input type="text" id="borrower-id" placeholder="" novalidate>
+                    <span class="error-message" id="borrower-id-error"></span>
+                </div>
+
                 <div id="first-name-field" class="field">
                     <label>First Name</label>
                     <input type="text" id="first-name" placeholder="e.g. John" novalidate>
@@ -82,17 +97,8 @@
                     <span class="error-message" id="department-error"></span>
                 </div>
                 
-                <div id="designation-field" class="field">
-                    <label>Designation</label>
-                    <select id="designation">
-                        <option value="1">Student</option>
-                        <option value="2">Faculty</option>
-                    </select>
-                    <span class="error-message" id="designation-error"></span>
-                </div>
-                
                 <div id="course-details-field" class="field hidden">
-                    <label>Course Details</label>
+                    <label>Course & Year</label>
                     <input type="text" id="course-details" placeholder="e.g. BSN-4A" novalidate>
                     <span class="error-message" id="course-details-error"></span>
                 </div>
@@ -209,6 +215,7 @@
                     <h2>Borrower Details</h2>
                     <div id="summary-bd-content">
                         <div class="row-header">
+                            <h3><span id="summary-id-label"></span> <span id="summary-id"></span></h3>
                             <h3>First Name: <span id="summary-fn"></span></h3>
                             <h3>Middle Initial: <span id="summary-mi"></span></h3>
                             <h3>Last Name: <span id="summary-ln"></span></h3>
@@ -216,7 +223,7 @@
                             <h3>Contact No.: <span id="summary-contact"></span></h3>
                             <h3>Department: <span id="summary-department"></span></h3>
                             <h3>Designation: <span id="summary-designation"></span></h3>
-                            <h3>Course Details: <span id="summary-course"></span></h3>
+                            <h3>Course & Year: <span id="summary-course"></span></h3>
                             <h3>Subject: <span id="summary-subject"></span></h3>
                         </div>
                     </div>

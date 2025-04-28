@@ -6,6 +6,19 @@ export function validateForm() {
 
     let hasErrors = false;
 
+    // Borrower ID Validation
+    const borrowerId = document.getElementById('borrower-id').value.trim();
+    const borrowerIdError = document.getElementById('borrower-id-error');
+    if (!borrowerId) {
+        borrowerIdError.textContent = "ID is required.";
+        borrowerIdError.classList.remove('hidden');
+        hasErrors = true;
+    } else if (borrowerId.length > 30) {
+        borrowerIdError.textContent = "ID must not exceed 30 characters.";
+        borrowerIdError.classList.remove('hidden');
+        hasErrors = true;
+    }
+
     // First Name Validation
     const firstName = document.getElementById('first-name').value.trim();
     const firstNameError = document.getElementById('first-name-error');
@@ -49,7 +62,7 @@ export function validateForm() {
         emailError.classList.remove('hidden');
         hasErrors = true;
     } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        emailError.textContent = "Please enter a valid email removeress.";
+        emailError.textContent = "Please enter a valid email address.";
         emailError.classList.remove('hidden');
         hasErrors = true;
     } else if (email.length > 320) {
@@ -115,10 +128,6 @@ export function validateForm() {
         hasErrors = true;
     }
 
-    // If no errors, you can proceed with form submission
-    if (!hasErrors) {
-        return true;
-    } else {
-        return false;
-    }
+    // If no errors, return true, else false
+    return !hasErrors;
 }
