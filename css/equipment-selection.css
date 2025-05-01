@@ -97,4 +97,9 @@
 .equipment-card > button:hover {
     opacity: 0.9;
 }
+
+.equipment-qty {
+    color: #217a34;
+    font-weight: bold;
+}
 /*****/

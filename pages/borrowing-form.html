@@ -39,7 +39,7 @@
     </header>
     <main>
         <!-- BORROWER DETAILS PAGE -->
-        <div id="borrower-details-container" class="page">
+        <div id="borrower-details-container" class="page hidden">
             <div id="top">
                 <div></div>
                 <h1>Borrower Details</h1>
@@ -115,7 +115,7 @@
         </div>
 
         <!-- EQUIPMENT SELECTION PAGE -->
-        <div id="equipment-selection-container" class="page hidden">
+        <div id="equipment-selection-container" class="page">
             <div id="top">
                 <button id="btn-back-es" class="btn-back">&lt;</button>
                 <h1>Equipment Selection</h1>
@@ -144,10 +144,13 @@
 
             <template id="equipment-card-template">
                 <div class="equipment-card" data-id="" data-category="">
-                  <img src="" alt="Equipment Image" class="equipment-img" />
-                  <h3 class="equipment-name"></h3>
-                  <p class="equipment-specification"></p>
-                  <p class="equipment-description"></p>
+                  <img src="" alt="Equipment Image" class="equipment-img"/>
+                  <div id="equipment-details">
+                    <h3 class="equipment-name"></h3>
+                    <p class="equipment-specification"></p>
+                    <p class="equipment-description"></p>
+                    <p class="equipment-qty"><span>Available:</span> <span></span></p>
+                  </div>
                   <button class="btn-borrow">Borrow</button>
                 </div>
               </template>
@@ -183,6 +186,7 @@
                                 <h4 class="equipment-name">Equipment Name</h4>
                                 <p class="equipment-specification">Specification</p>
                                 <p class="equipment-description">Description</p>
+                                <p class="equipment-qty"><span>Available:</span> <span></span></p>
                             </div>
                         </td>
                         <td>
