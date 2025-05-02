@@ -213,8 +213,14 @@ function applyFilters() {
         equipmentCards.forEach((card) => {
             const cardName = card.querySelector('h3').textContent.toLowerCase();
             const cardCategory = card.getAttribute('data-category');
+            const cardSpecification = card.querySelector('#equipment-details .equipment-specification').textContent.toLowerCase();
+            const cardDescription = card.querySelector('#equipment-details .equipment-description').textContent.toLowerCase();
             
-            const matchesSearch = cardName.includes(searchText);
+            const matchesSearch = 
+                cardName.includes(searchText) ||
+                cardSpecification.includes(searchText) ||
+                cardDescription.includes(searchText);
+
             const matchesCategory = selectedCategory === "" || cardCategory === selectedCategory;
 
             // Show card if it matches both filters, otherwise hide it
