@@ -5,7 +5,8 @@
     "name": "Alcohol Burner",
     "specification": "",
     "description": "Glass with metal cap",
-    "image": "Alcohol Burner-Glass with metal cap.png"
+    "image": "Alcohol Burner-Glass with metal cap.png",
+    "quantity": 16
   },
   {
     "id": 74,
@@ -13,7 +14,8 @@
     "name": "Amp & Voltmeter",
     "specification": "",
     "description": "Plastic base",
-    "image": "Amp & Voltmeter-Plastic base.png"
+    "image": "Amp & Voltmeter-Plastic base.png",
+    "quantity": 17
   },
   {
     "id": 75,
@@ -21,7 +23,8 @@
     "name": "Area & Volume explanator",
     "specification": "",
     "description": "",
-    "image": "Area & Volume explanator.png"
+    "image": "Area & Volume explanator.png",
+    "quantity": 1
   },
   {
     "id": 2,
@@ -29,7 +32,8 @@
     "name": "Aspirator",
     "specification": "",
     "description": "Rubber",
-    "image": "Aspirator-Rubber.png"
+    "image": "Aspirator-Rubber.png",
+    "quantity": 10
   },
   {
     "id": 3,
@@ -37,7 +41,8 @@
     "name": "Atomic Molecular Model Kit",
     "specification": "",
     "description": "Ball and Stick Model",
-    "image": "Atomic Molecular Model Kit-Ball and Stick Model.png"
+    "image": "Atomic Molecular Model Kit-Ball and Stick Model.png",
+    "quantity": 10
   },
   {
     "id": 4,
@@ -45,7 +50,8 @@
     "name": "Balance",
     "specification": "",
     "description": "Analytical",
-    "image": "Balance-Analytical.png"
+    "image": "Balance-Analytical.png",
+    "quantity": 0
   },
   {
     "id": 5,
@@ -53,7 +59,8 @@
     "name": "Balance",
     "specification": "",
     "description": "Analytical-Digital",
-    "image": "Balance-Analytical-Digital.png"
+    "image": "Balance-Analytical-Digital.png",
+    "quantity": 1
   },
   {
     "id": 6,
@@ -61,7 +68,8 @@
     "name": "Balance",
     "specification": "",
     "description": "Platform",
-    "image": "Balance-Platform.png"
+    "image": "Balance-Platform.png",
+    "quantity": 1
   },
   {
     "id": 7,
@@ -69,7 +77,8 @@
     "name": "Balance",
     "specification": "",
     "description": "Triple Beam",
-    "image": "Balance-Triple Beam.png"
+    "image": "Balance-Triple Beam.png",
+    "quantity": 1
   },
   {
     "id": 8,
@@ -77,7 +86,8 @@
     "name": "Basin",
     "specification": "",
     "description": "Stainless steel",
-    "image": "Basin-Stainless steel.png"
+    "image": "Basin-Stainless steel.png",
+    "quantity": 4
   },
   {
     "id": 9,
@@ -85,7 +95,8 @@
     "name": "Batwing",
     "specification": "For Bunsen Burner",
     "description": "Stainless steel",
-    "image": "Batwing-For Bunsen Burner-Stainless steel.png"
+    "image": "Batwing-For Bunsen Burner-Stainless steel.png",
+    "quantity": 1
   },
   {
     "id": 10,
@@ -93,7 +104,8 @@
     "name": "Beaker",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "Beaker-100 mL-Glass.png"
+    "image": "Beaker-100 mL-Glass.png",
+    "quantity": 15
   },
   {
     "id": 11,
@@ -101,7 +113,8 @@
     "name": "Beaker",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "Beaker-250 mL-Glass.png"
+    "image": "Beaker-250 mL-Glass.png",
+    "quantity": 22
   },
   {
     "id": 12,
@@ -109,7 +122,8 @@
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Glass",
-    "image": "Beaker-400 mL-Glass.png"
+    "image": "Beaker-400 mL-Glass.png",
+    "quantity": 10
   },
   {
     "id": 13,
@@ -117,7 +131,8 @@
     "name": "Beaker",
     "specification": "400 mL",
     "description": "Plastic",
-    "image": "Beaker-400 mL-Plastic.png"
+    "image": "Beaker-400 mL-Plastic.png",
+    "quantity": 17
   },
   {
     "id": 14,
@@ -125,7 +140,8 @@
     "name": "Beaker",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "Beaker-500 mL-Glass.png"
+    "image": "Beaker-500 mL-Glass.png",
+    "quantity": 3
   },
   {
     "id": 15,
@@ -133,7 +149,8 @@
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "Beaker-1000 mL-Glass.png"
+    "image": "Beaker-1000 mL-Glass.png",
+    "quantity": 3
   },
   {
     "id": 16,
@@ -141,7 +158,8 @@
     "name": "Beaker",
     "specification": "1000 mL",
     "description": "Plastic",
-    "image": "Beaker-1000 mL-Plastic.png"
+    "image": "Beaker-1000 mL-Plastic.png",
+    "quantity": 5
   },
   {
     "id": 17,
@@ -149,7 +167,8 @@
     "name": "Borers",
     "specification": "",
     "description": "Metal",
-    "image": "Borers-Metal.png"
+    "image": "Borers-Metal.png",
+    "quantity": 2
   },
   {
     "id": 18,
@@ -157,7 +176,8 @@
     "name": "Bosshead clamp",
     "specification": "",
     "description": "Metal",
-    "image": "Bosshead clamp-Metal.png"
+    "image": "Bosshead clamp-Metal.png",
+    "quantity": 10
   },
   {
     "id": 19,
@@ -165,7 +185,8 @@
     "name": "Bunsen Burner",
     "specification": "",
     "description": "Stainless steel",
-    "image": "Bunsen Burner-Stainless steel.png"
+    "image": "Bunsen Burner-Stainless steel.png",
+    "quantity": 6
   },
   {
     "id": 20,
@@ -173,7 +194,8 @@
     "name": "Burette",
     "specification": "",
     "description": "Amber glass",
-    "image": "Burette-Amber glass.png"
+    "image": "Burette-Amber glass.png",
+    "quantity": 2
   },
   {
     "id": 21,
@@ -181,7 +203,8 @@
     "name": "Burette",
     "specification": "Acid",
     "description": "Clear glass",
-    "image": "Burette-Acid-Clear glass.png"
+    "image": "Burette-Acid-Clear glass.png",
+    "quantity": 5
   },
   {
     "id": 22,
@@ -189,7 +212,8 @@
     "name": "Burette",
     "specification": "Base",
     "description": "Clear glass",
-    "image": "Burette-Base-Clear glass.png"
+    "image": "Burette-Base-Clear glass.png",
+    "quantity": 2
   },
   {
     "id": 76,
@@ -197,7 +221,8 @@
     "name": "Caliper",
     "specification": "Micrometer",
     "description": "Stainless steel",
-    "image": "Caliper-Micrometer-Stainless steel.png"
+    "image": "Caliper-Micrometer-Stainless steel.png",
+    "quantity": 1
   },
   {
     "id": 77,
@@ -205,7 +230,8 @@
     "name": "Caliper",
     "specification": "Vernier",
     "description": "Stainless steel",
-    "image": "Caliper-Vernier-Stainless steel.png"
+    "image": "Caliper-Vernier-Stainless steel.png",
+    "quantity": 2
   },
   {
     "id": 78,
@@ -213,7 +239,8 @@
     "name": "Caliper",
     "specification": "Disposable",
     "description": "Plastic",
-    "image": "Caliper-Disposable-Plastic.png"
+    "image": "Caliper-Disposable-Plastic.png",
+    "quantity": 3
   },
   {
     "id": 23,
@@ -221,7 +248,8 @@
     "name": "Calorimeter",
     "specification": "",
     "description": "Stainless",
-    "image": "Calorimeter-Stainless.png"
+    "image": "Calorimeter-Stainless.png",
+    "quantity": 10
   },
   {
     "id": 24,
@@ -229,7 +257,8 @@
     "name": "Centrifuge tube",
     "specification": "",
     "description": "Glass",
-    "image": "Centrifuge tube-Glass.png"
+    "image": "Centrifuge tube-Glass.png",
+    "quantity": 9
   },
   {
     "id": 80,
@@ -237,7 +266,8 @@
     "name": "Circuit board kit and accessories",
     "specification": "",
     "description": "Plastic base with metal rod",
-    "image": "Circuit board kit and accessories-Plastic base with metal rod.png"
+    "image": "Circuit board kit and accessories-Plastic base with metal rod.png",
+    "quantity": 10
   },
   {
     "id": 79,
@@ -245,7 +275,8 @@
     "name": "Circular force apparatus",
     "specification": "",
     "description": "Circular metal with stand",
-    "image": "Circular force apparatus-Circular metal with stand.png"
+    "image": "Circular force apparatus-Circular metal with stand.png",
+    "quantity": 0
   },
   {
     "id": 25,
@@ -253,7 +284,8 @@
     "name": "Clamp",
     "specification": "For Burette",
     "description": "Double",
-    "image": "Clamp-For Burette-Double.png"
+    "image": "Clamp-For Burette-Double.png",
+    "quantity": 10
   },
   {
     "id": 26,
@@ -261,7 +293,8 @@
     "name": "Clamp",
     "specification": "Universal",
     "description": "Metal",
-    "image": "Clamp-Universal-Metal.png"
+    "image": "Clamp-Universal-Metal.png",
+    "quantity": 15
   },
   {
     "id": 81,
@@ -269,7 +302,8 @@
     "name": "Compass (board)",
     "specification": "",
     "description": "Plastic",
-    "image": "Compass (board)-Plastic.png"
+    "image": "Compass (board)-Plastic.png",
+    "quantity": 1
   },
   {
     "id": 27,
@@ -277,7 +311,8 @@
     "name": "Condenser",
     "specification": "",
     "description": "Glass",
-    "image": "Condenser-Glass.png"
+    "image": "Condenser-Glass.png",
+    "quantity": 3
   },
   {
     "id": 28,
@@ -285,7 +320,8 @@
     "name": "Crucible",
     "specification": "With cover",
     "description": "Ceramic",
-    "image": "Crucible-With cover-Ceramic.png"
+    "image": "Crucible-With cover-Ceramic.png",
+    "quantity": 2
   },
   {
     "id": 29,
@@ -293,7 +329,8 @@
     "name": "Cylinder",
     "specification": "Est. Cap. 1000 mL",
     "description": "Glass",
-    "image": "Cylinder-Est. Cap. 1000 mL-Glass.png"
+    "image": "Cylinder-Est. Cap. 1000 mL-Glass.png",
+    "quantity": 1
   },
   {
     "id": 30,
@@ -301,7 +338,8 @@
     "name": "Distilling flask",
     "specification": "250 mL cap.",
     "description": "Glass, China",
-    "image": "Distilling flask-250 mL cap.-Glass, China.png"
+    "image": "Distilling flask-250 mL cap.-Glass, China.png",
+    "quantity": 3
   },
   {
     "id": 31,
@@ -309,7 +347,8 @@
     "name": "Dropping bottle",
     "specification": "",
     "description": "Plastic",
-    "image": "Dropping bottle-Plastic.png"
+    "image": "Dropping bottle-Plastic.png",
+    "quantity": 46
   },
   {
     "id": 82,
@@ -317,7 +356,8 @@
     "name": "Dynamic cart",
     "specification": "",
     "description": "Plastic",
-    "image": "Dynamic cart-Plastic.png"
+    "image": "Dynamic cart-Plastic.png",
+    "quantity": 10
   },
   {
     "id": 83,
@@ -325,7 +365,8 @@
     "name": "Dynamic cart",
     "specification": "",
     "description": "Wooden",
-    "image": "Dynamic cart-Wooden.png"
+    "image": "Dynamic cart-Wooden.png",
+    "quantity": 4
   },
   {
     "id": 84,
@@ -333,7 +374,8 @@
     "name": "Electric motor kit",
     "specification": "",
     "description": "",
-    "image": "Electric motor kit.png"
+    "image": "Electric motor kit.png",
+    "quantity": 10
   },
   {
     "id": 85,
@@ -341,7 +383,8 @@
     "name": "Electricity distribution board",
     "specification": "",
     "description": "",
-    "image": "Electricity distribution board.png"
+    "image": "Electricity distribution board.png",
+    "quantity": 2
   },
   {
     "id": 32,
@@ -349,7 +392,8 @@
     "name": "Erlenmeyer flask",
     "specification": "125 mL",
     "description": "Glass",
-    "image": "Erlenmeyer flask-125 mL-Glass.png"
+    "image": "Erlenmeyer flask-125 mL-Glass.png",
+    "quantity": 1
   },
   {
     "id": 33,
@@ -357,7 +401,8 @@
     "name": "Erlenmeyer flask",
     "specification": "250 mL",
     "description": "Glass",
-    "image": "Erlenmeyer flask-250 mL-Glass.png"
+    "image": "Erlenmeyer flask-250 mL-Glass.png",
+    "quantity": 20
   },
   {
     "id": 34,
@@ -365,7 +410,8 @@
     "name": "Erlenmeyer flask",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "Erlenmeyer flask-500 mL-Glass.png"
+    "image": "Erlenmeyer flask-500 mL-Glass.png",
+    "quantity": 5
   },
   {
     "id": 35,
@@ -373,7 +419,8 @@
     "name": "Erlenmeyer flask",
     "specification": "1000 mL",
     "description": "Glass",
-    "image": "Erlenmeyer flask-1000 mL-Glass.png"
+    "image": "Erlenmeyer flask-1000 mL-Glass.png",
+    "quantity": 5
   },
   {
     "id": 36,
@@ -381,7 +428,8 @@
     "name": "Erlenmeyer flask",
     "specification": "2000 mL",
     "description": "Glass",
-    "image": "Erlenmeyer flask-2000 mL-Glass.png"
+    "image": "Erlenmeyer flask-2000 mL-Glass.png",
+    "quantity": 5
   },
   {
     "id": 37,
@@ -389,7 +437,8 @@
     "name": "Evaporating dish",
     "specification": "",
     "description": "Ceramic",
-    "image": "Evaporating dish-Ceramic.png"
+    "image": "Evaporating dish-Ceramic.png",
+    "quantity": 15
   },
   {
     "id": 38,
@@ -397,7 +446,8 @@
     "name": "Forceps",
     "specification": "",
     "description": "Stainless steel",
-    "image": "Forceps-Stainless steel.png"
+    "image": "Forceps-Stainless steel.png",
+    "quantity": 6
   },
   {
     "id": 86,
@@ -405,7 +455,8 @@
     "name": "Free fall apparatus",
     "specification": "",
     "description": "",
-    "image": "Free fall apparatus.png"
+    "image": "Free fall apparatus.png",
+    "quantity": 0
   },
   {
     "id": 39,
@@ -413,7 +464,8 @@
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Glass",
-    "image": "Funnel-Transfer-Glass.png"
+    "image": "Funnel-Transfer-Glass.png",
+    "quantity": 18
   },
   {
     "id": 40,
@@ -421,7 +473,8 @@
     "name": "Funnel",
     "specification": "Transfer",
     "description": "Plastic",
-    "image": "Funnel-Transfer-Plastic.png"
+    "image": "Funnel-Transfer-Plastic.png",
+    "quantity": 7
   },
   {
     "id": 87,
@@ -429,7 +482,8 @@
     "name": "Geoboard",
     "specification": "",
     "description": "Plastic",
-    "image": "Geoboard-Plastic.png"
+    "image": "Geoboard-Plastic.png",
+    "quantity": 18
   },
   {
     "id": 41,
@@ -437,7 +491,8 @@
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Glass",
-    "image": "Graduated cylinder-10 mL-Glass.png"
+    "image": "Graduated cylinder-10 mL-Glass.png",
+    "quantity": 5
   },
   {
     "id": 42,
@@ -445,7 +500,8 @@
     "name": "Graduated cylinder",
     "specification": "10 mL",
     "description": "Plastic",
-    "image": "Graduated cylinder-10 mL-Plastic.png"
+    "image": "Graduated cylinder-10 mL-Plastic.png",
+    "quantity": 13
   },
   {
     "id": 43,
@@ -453,7 +509,8 @@
     "name": "Graduated cylinder",
     "specification": "50 mL",
     "description": "Glass",
-    "image": "Graduated cylinder-50 mL-Glass.png"
+    "image": "Graduated cylinder-50 mL-Glass.png",
+    "quantity": 7
   },
   {
     "id": 44,
@@ -461,7 +518,8 @@
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Glass",
-    "image": "Graduated cylinder-100 mL-Glass.png"
+    "image": "Graduated cylinder-100 mL-Glass.png",
+    "quantity": 7
   },
   {
     "id": 45,
@@ -469,7 +527,8 @@
     "name": "Graduated cylinder",
     "specification": "100 mL",
     "description": "Plastic",
-    "image": "Graduated cylinder-100 mL-Plastic.png"
+    "image": "Graduated cylinder-100 mL-Plastic.png",
+    "quantity": 12
   },
   {
     "id": 46,
@@ -477,7 +536,8 @@
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Glass",
-    "image": "Graduated cylinder-500 mL-Glass.png"
+    "image": "Graduated cylinder-500 mL-Glass.png",
+    "quantity": 1
   },
   {
     "id": 47,
@@ -485,7 +545,8 @@
     "name": "Graduated cylinder",
     "specification": "500 mL",
     "description": "Plastic",
-    "image": "Graduated cylinder-500 mL-Plastic.png"
+    "image": "Graduated cylinder-500 mL-Plastic.png",
+    "quantity": 10
   },
   {
     "id": 88,
@@ -493,7 +554,8 @@
     "name": "Hanging mass",
     "specification": "",
     "description": "Wooden",
-    "image": "Hanging mass-Wooden.png"
+    "image": "Hanging mass-Wooden.png",
+    "quantity": 2
   },
   {
     "id": 48,
@@ -501,7 +563,8 @@
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: National",
-    "image": "Hot Plate-Brand: National.png"
+    "image": "Hot Plate-Brand: National.png",
+    "quantity": 1
   },
   {
     "id": 49,
@@ -509,7 +572,8 @@
     "name": "Hot Plate",
     "specification": "",
     "description": "Brand: Hanabishi",
-    "image": "Hot Plate-Brand: Hanabishi.png"
+    "image": "Hot Plate-Brand: Hanabishi.png",
+    "quantity": 1
   },
   {
     "id": 89,
@@ -517,7 +581,8 @@
     "name": "Inclined plane",
     "specification": "",
     "description": "Wooden",
-    "image": "Inclined plane-Wooden.png"
+    "image": "Inclined plane-Wooden.png",
+    "quantity": 3
   },
   {
     "id": 50,
@@ -525,7 +590,8 @@
     "name": "Iron ring",
     "specification": "",
     "description": "Metal",
-    "image": "Iron ring-Metal.png"
+    "image": "Iron ring-Metal.png",
+    "quantity": 7
   },
   {
     "id": 51,
@@ -533,7 +599,8 @@
     "name": "Iron stand",
     "specification": "",
     "description": "Metal",
-    "image": "Iron stand-Metal.png"
+    "image": "Iron stand-Metal.png",
+    "quantity": 22
   },
   {
     "id": 90,
@@ -541,7 +608,8 @@
     "name": "J-tube / U-tube",
     "specification": "",
     "description": "With wood support",
-    "image": "J-tube / U-tube-With wood support.png"
+    "image": "J-tube / U-tube-With wood support.png",
+    "quantity": 4
   },
   {
     "id": 91,
@@ -549,7 +617,8 @@
     "name": "Light box and optical kit",
     "specification": "",
     "description": "",
-    "image": "Light box and optical kit.png"
+    "image": "Light box and optical kit.png",
+    "quantity": 10
   },
   {
     "id": 92,
@@ -557,7 +626,8 @@
     "name": "Liter container",
     "specification": "",
     "description": "Breakable plastic",
-    "image": "Liter container-Breakable plastic.png"
+    "image": "Liter container-Breakable plastic.png",
+    "quantity": 8
   },
   {
     "id": 93,
@@ -565,7 +635,8 @@
     "name": "Magnet",
     "specification": "Bar",
     "description": "",
-    "image": "Magnet-Bar.png"
+    "image": "Magnet-Bar.png",
+    "quantity": 7
   },
   {
     "id": 94,
@@ -573,7 +644,8 @@
     "name": "Magnet",
     "specification": "Ring",
     "description": "",
-    "image": "Magnet-Ring.png"
+    "image": "Magnet-Ring.png",
+    "quantity": 11
   },
   {
     "id": 95,
@@ -581,7 +653,8 @@
     "name": "Magnet",
     "specification": "Assorted sizes",
     "description": "",
-    "image": "Magnet-Assorted sizes.png"
+    "image": "Magnet-Assorted sizes.png",
+    "quantity": 10
   },
   {
     "id": 52,
@@ -589,7 +662,8 @@
     "name": "Masses",
     "specification": "",
     "description": "Metal",
-    "image": "Masses-Metal.png"
+    "image": "Masses-Metal.png",
+    "quantity": 4
   },
   {
     "id": 96,
@@ -597,7 +671,8 @@
     "name": "Metal balls",
     "specification": "Assorted sizes",
     "description": "",
-    "image": "Metal balls-Assorted sizes.png"
+    "image": "Metal balls-Assorted sizes.png",
+    "quantity": 12
   },
   {
     "id": 97,
@@ -605,7 +680,8 @@
     "name": "Meterstick",
     "specification": "",
     "description": "Plastic",
-    "image": "Meterstick-Plastic.png"
+    "image": "Meterstick-Plastic.png",
+    "quantity": 5
   },
   {
     "id": 98,
@@ -613,7 +689,8 @@
     "name": "Meterstick",
     "specification": "",
     "description": "Wooden",
-    "image": "Meterstick-Wooden.png"
+    "image": "Meterstick-Wooden.png",
+    "quantity": 6
   },
   {
     "id": 53,
@@ -621,7 +698,8 @@
     "name": "Mortar and pestle",
     "specification": "",
     "description": "Ceramic",
-    "image": "Mortar and pestle-Ceramic.png"
+    "image": "Mortar and pestle-Ceramic.png",
+    "quantity": 10
   },
   {
     "id": 54,
@@ -629,7 +707,8 @@
     "name": "Petri dish",
     "specification": "With cover",
     "description": "Glass",
-    "image": "Petri dish-With cover-Glass.png"
+    "image": "Petri dish-With cover-Glass.png",
+    "quantity": 10
   },
   {
     "id": 55,
@@ -637,7 +716,8 @@
     "name": "Petri dish",
     "specification": "Without cover",
     "description": "Glass",
-    "image": "Petri dish-Without cover-Glass.png"
+    "image": "Petri dish-Without cover-Glass.png",
+    "quantity": 17
   },
   {
     "id": 56,
@@ -645,7 +725,8 @@
     "name": "pH Meter",
     "specification": "",
     "description": "Brand: Suntex",
-    "image": "pH Meter-Brand: Suntex.png"
+    "image": "pH Meter-Brand: Suntex.png",
+    "quantity": 4
   },
   {
     "id": 57,
@@ -653,7 +734,8 @@
     "name": "Pipestem triangle",
     "specification": "",
     "description": "Metal frame with ceramic",
-    "image": "Pipestem triangle-Metal frame with ceramic.png"
+    "image": "Pipestem triangle-Metal frame with ceramic.png",
+    "quantity": 6
   },
   {
     "id": 58,
@@ -661,7 +743,8 @@
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Glass",
-    "image": "Pipette-1.0 mL-Glass.png"
+    "image": "Pipette-1.0 mL-Glass.png",
+    "quantity": 1
   },
   {
     "id": 59,
@@ -669,7 +752,8 @@
     "name": "Pipette",
     "specification": "1.0 mL",
     "description": "Plastic",
-    "image": "Pipette-1.0 mL-Plastic.png"
+    "image": "Pipette-1.0 mL-Plastic.png",
+    "quantity": 10
   },
   {
     "id": 60,
@@ -677,7 +761,8 @@
     "name": "Pipette",
     "specification": "5.0 mL",
     "description": "Glass",
-    "image": "Pipette-5.0 mL-Glass.png"
+    "image": "Pipette-5.0 mL-Glass.png",
+    "quantity": 5
   },
   {
     "id": 61,
@@ -685,7 +770,8 @@
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Glass",
-    "image": "Pipette-10 x 1/10-Glass.png"
+    "image": "Pipette-10 x 1/10-Glass.png",
+    "quantity": 7
   },
   {
     "id": 62,
@@ -693,7 +779,8 @@
     "name": "Pipette",
     "specification": "10 x 1/10",
     "description": "Plastic",
-    "image": "Pipette-10 x 1/10-Plastic.png"
+    "image": "Pipette-10 x 1/10-Plastic.png",
+    "quantity": 5
   },
   {
     "id": 63,
@@ -701,7 +788,8 @@
     "name": "Pipette",
     "specification": "1 x 1/10",
     "description": "Glass",
-    "image": "Pipette-1 x 1/10-Glass.png"
+    "image": "Pipette-1 x 1/10-Glass.png",
+    "quantity": 5
   },
   {
     "id": 64,
@@ -709,7 +797,8 @@
     "name": "Pipette",
     "specification": "Single channel",
     "description": "Adjustable",
-    "image": "Pipette-Single channel-Adjustable.png"
+    "image": "Pipette-Single channel-Adjustable.png",
+    "quantity": 1
   },
   {
     "id": 99,
@@ -717,7 +806,8 @@
     "name": "Pulley",
     "specification": "5-cm diameter",
     "description": "Plastic",
-    "image": "Pulley-5-cm diameter-Plastic.png"
+    "image": "Pulley-5-cm diameter-Plastic.png",
+    "quantity": 4
   },
   {
     "id": 100,
@@ -725,7 +815,8 @@
     "name": "Slotted masses",
     "specification": "",
     "description": "Metal with hook",
-    "image": "Slotted masses-Metal with hook.png"
+    "image": "Slotted masses-Metal with hook.png",
+    "quantity": 2
   },
   {
     "id": 101,
@@ -733,7 +824,8 @@
     "name": "Slotted masses",
     "specification": "",
     "description": "With plastic casing",
-    "image": "Slotted masses-With plastic casing.png"
+    "image": "Slotted masses-With plastic casing.png",
+    "quantity": 1
   },
   {
     "id": 65,
@@ -741,7 +833,8 @@
     "name": "Spatula",
     "specification": "",
     "description": "Metal",
-    "image": "Spatula-Metal.png"
+    "image": "Spatula-Metal.png",
+    "quantity": 28
   },
   {
     "id": 66,
@@ -749,7 +842,8 @@
     "name": "Spatula",
     "specification": "",
     "description": "Ceramic",
-    "image": "Spatula-Ceramic.png"
+    "image": "Spatula-Ceramic.png",
+    "quantity": 10
   },
   {
     "id": 102,
@@ -757,7 +851,8 @@
     "name": "Spring balance",
     "specification": "",
     "description": "Gram/Newton",
-    "image": "Spring balance-Gram/Newton.png"
+    "image": "Spring balance-Gram/Newton.png",
+    "quantity": 18
   },
   {
     "id": 67,
@@ -765,7 +860,8 @@
     "name": "Stirring rod",
     "specification": "",
     "description": "Glass, assorted lengths",
-    "image": "Stirring rod-Glass, assorted lengths.png"
+    "image": "Stirring rod-Glass, assorted lengths.png",
+    "quantity": 11
   },
   {
     "id": 68,
@@ -773,7 +869,8 @@
     "name": "Stirring rod",
     "specification": "6mm x 75 cm",
     "description": "Glass, uncut",
-    "image": "Stirring rod-6mm x 75 cm-Glass, uncut.png"
+    "image": "Stirring rod-6mm x 75 cm-Glass, uncut.png",
+    "quantity": 16
   },
   {
     "id": 69,
@@ -781,7 +878,8 @@
     "name": "Syringe",
     "specification": "50 mL capacity",
     "description": "Glass",
-    "image": "Syringe-50 mL capacity-Glass.png"
+    "image": "Syringe-50 mL capacity-Glass.png",
+    "quantity": 5
   },
   {
     "id": 70,
@@ -789,7 +887,8 @@
     "name": "Test tube",
     "specification": "4 mL capacity",
     "description": "Glass",
-    "image": "Test tube-4 mL capacity-Glass.png"
+    "image": "Test tube-4 mL capacity-Glass.png",
+    "quantity": 384
   },
   {
     "id": 71,
@@ -797,7 +896,8 @@
     "name": "Test tube",
     "specification": "15 mL capacity",
     "description": "Glass",
-    "image": "Test tube-15 mL capacity-Glass.png"
+    "image": "Test tube-15 mL capacity-Glass.png",
+    "quantity": 56
   },
   {
     "id": 72,
@@ -805,7 +905,8 @@
     "name": "Test tube",
     "specification": "25 mL capacity",
     "description": "Glass",
-    "image": "Test tube-25 mL capacity-Glass.png"
+    "image": "Test tube-25 mL capacity-Glass.png",
+    "quantity": 156
   },
   {
     "id": 73,
@@ -813,7 +914,8 @@
     "name": "Test tube",
     "specification": "60 mL capacity",
     "description": "Glass",
-    "image": "Test tube-60 mL capacity-Glass.png"
+    "image": "Test tube-60 mL capacity-Glass.png",
+    "quantity": 88
   },
   {
     "id": 103,
@@ -821,7 +923,8 @@
     "name": "Ticker timer",
     "specification": "",
     "description": "",
-    "image": "Ticker timer.png"
+    "image": "Ticker timer.png",
+    "quantity": 10
   },
   {
     "id": 104,
@@ -829,7 +932,8 @@
     "name": "Triangle",
     "specification": "Board, 30/60",
     "description": "Plastic",
-    "image": "Triangle-Board, 30/60-Plastic.png"
+    "image": "Triangle-Board, 30/60-Plastic.png",
+    "quantity": 1
   },
   {
     "id": 105,
@@ -837,7 +941,8 @@
     "name": "Triangle",
     "specification": "Board, 45/45",
     "description": "Plastic",
-    "image": "Triangle-Board, 45/45-Plastic.png"
+    "image": "Triangle-Board, 45/45-Plastic.png",
+    "quantity": 1
   },
   {
     "id": 106,
@@ -845,7 +950,8 @@
     "name": "Tuning fork",
     "specification": "",
     "description": "Metal",
-    "image": "Tuning fork-Metal.png"
+    "image": "Tuning fork-Metal.png",
+    "quantity": 2
   },
   {
     "id": 107,
@@ -853,7 +959,8 @@
     "name": "Weight holder",
     "specification": "Small",
     "description": "Metal",
-    "image": "Weight holder-Small-Metal.png"
+    "image": "Weight holder-Small-Metal.png",
+    "quantity": 2
   },
   {
     "id": 108,
@@ -861,6 +968,7 @@
     "name": "Weight holder",
     "specification": "Big",
     "description": "Metal",
-    "image": "Weight holder-Big-Metal.png"
+    "image": "Weight holder-Big-Metal.png",
+    "quantity": 12
   }
 ]

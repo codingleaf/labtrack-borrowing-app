@@ -83,6 +83,7 @@
     height: 60%;
     object-fit: contain;
     width: auto;
+    border-radius: 5%;
 }
 
 .equipment-card > button {
@@ -103,3 +104,26 @@
     font-weight: bold;
 }
 /*****/
+
+.has-badge {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+}

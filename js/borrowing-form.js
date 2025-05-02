@@ -15,14 +15,65 @@ let borrowingList = [];
 // Data Summary (For Generating QR Code)
 let qrData;
 
+function updateBorrowingBadge(count) {
+    const badge = document.getElementById('borrow-count-badge');
+    badge.textContent = count;
+    badge.style.display = 'inline';
+}
+
 function setEquipmentImage(imgElement, imageName) {
-    const imgPath = `../assets/images/${imageName}`;
+    // Function to replace spaces with "%20" for URL compatibility
+    const encodeSpaces = (str) => str.replace(/\s+/g, '%20');
+
+    // Remove the .png extension if it exists (just in case)
+    const baseName = imageName.replace('.png', '');
+
+    const imageParts = baseName.split('-'); // Split the image name by dash
+
+    // Build possible variants of the image name
+    const name = encodeSpaces(imageParts[0]); // e.g., Beaker => Beaker
+    const specification = imageParts.length > 1 ? encodeSpaces(imageParts[1]) : ''; // e.g., 100 mL => 100%20mL or empty
+    const description = imageParts.length > 2 ? encodeSpaces(imageParts.slice(2).join('-')) : ''; // e.g., Glass => Glass or empty
+
+    // Generate the possible image names with .png added only once
+    const possibleImageNames = [
+        `${name}.png`, // Check for name only
+        `${name}-${specification}.png`, // Check for name-specification
+        `${name}-${description}.png`, // Check for name-description
+        `${name}-${specification}-${description}.png` // Check for name-specification-description
+    ];
+
+    const imgPath = `../assets/images/`;
     const fallbackPath = '../assets/images/placeholder.jpg';
 
-    const testImage = new Image();
-    testImage.onload = () => imgElement.src = imgPath;
-    testImage.onerror = () => imgElement.src = fallbackPath;
-    testImage.src = imgPath;
+    let foundImage = false;
+
+    // Loop through the possible image names and check if they exist
+    possibleImageNames.forEach(image => {
+        const imageUrl = `${imgPath}${image}`; // Construct image URL
+
+        // Log the generated image URL for debugging
+        console.log('Checking image URL:', imageUrl);
+
+        const testImage = new Image();
+        testImage.onload = () => {
+            imgElement.src = imageUrl;
+            foundImage = true;
+        };
+        testImage.onerror = () => {
+            // Do nothing, just move to the next image if it fails
+        };
+
+        // Test the image path
+        testImage.src = imageUrl;
+    });
+
+    // Fallback to placeholder if no image is found
+    setTimeout(() => {
+        if (!foundImage) {
+            imgElement.src = fallbackPath;
+        }
+    }, 500); // Wait for image loading attempts
 }
 
 async function loadEquipment() {
@@ -102,6 +153,7 @@ async function loadEquipment() {
             const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
             if (index > -1) borrowingList.splice(index, 1);
             newRow.remove();
+            updateBorrowingBadge(borrowingList.length);
           });
         
           // Append to table body
@@ -115,6 +167,8 @@ async function loadEquipment() {
             description: equipment['description'],
             quantity: 1
           });
+
+          updateBorrowingBadge(borrowingList.length);
         
           // Show success notification
           let notificationText = `ADDED ${equipment['name']}`;
