@@ -80,10 +80,14 @@
 }
 
 .equipment-card > img {
-    height: 60%;
     object-fit: contain;
     width: auto;
+    max-height: 35%;
     border-radius: 5%;
+}
+
+#equipment-details {
+    overflow: auto
 }
 
 .equipment-card > button {
