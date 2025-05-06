@@ -127,3 +127,20 @@
     text-align: center;
     line-height: 1;
 }
+
+#equipment-filters {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter-category, #filter-subject {
+    max-width: 10rem;
+    flex: 1;
+}
+
+#filter-category option, #filter-subject option {
+    padding: 0;
+}

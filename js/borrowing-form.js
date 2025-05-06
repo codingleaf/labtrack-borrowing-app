@@ -81,156 +81,197 @@ async function loadEquipment() {
     const rowTemplate = document.querySelector('#row-template');
     const tableBody = document.querySelector('#borrowing-list-table > tbody');
     const equipmentCardTemplate = document.querySelector('#equipment-card-template');
-  
+
     let equipmentData = [];
-  
+    let categories = [];
+    let subjects = [];
+
     try {
-      // Fetch from Firestore
-      const doc = await firebase.firestore().collection("equipment_data").doc("equipment").get();
-      if (!doc.exists) throw new Error("No document found");
-  
-      const firestoreData = doc.data();
-      equipmentData = firestoreData.data || [];
-  
+        // Fetch from Firestore
+        const doc = await firebase.firestore().collection("equipment_data").doc("equipment").get();
+        if (!doc.exists) throw new Error("No document found");
+
+        const firestoreData = doc.data();
+        categories = firestoreData.categories || [];
+        subjects = firestoreData.subjects || [];
+        equipmentData = firestoreData.data || [];
+
     } catch (firebaseError) {
-      console.warn('⚠️ Firebase load failed, falling back to equipment.json:', firebaseError);
-  
-      try {
-        const localRes = await fetch('../assets/data/equipment.json');
-        if (!localRes.ok) throw new Error('Failed to fetch local equipment data');
-        equipmentData = await localRes.json();
-      } catch (localError) {
-        console.error('❌ Failed to load equipment from both Firebase and local:', localError);
-        return;
-      }
+        console.warn('⚠️ Firebase load failed, falling back to equipment.json:', firebaseError);
+
+        try {
+            const localRes = await fetch('../assets/data/equipment.json');
+            if (!localRes.ok) throw new Error('Failed to fetch local equipment data');
+            const localData = await localRes.json();
+            categories = localData.categories || [];
+            subjects = localData.subjects || [];
+            equipmentData = localData.data || [];
+        } catch (localError) {
+            console.error('❌ Failed to load equipment from both Firebase and local:', localError);
+            return;
+        }
     }
-  
+
+    // Populate the filters
+    populateFilters(categories, subjects);
+
+    // Render the equipment cards
     equipmentData.forEach(equipment => {
         const cardClone = equipmentCardTemplate.content.cloneNode(true);
         const equipmentCard = cardClone.querySelector('.equipment-card');
-      
+
         equipmentCard.setAttribute('data-id', equipment['id']);
         equipmentCard.setAttribute('data-category', equipment['category']);
-      
+        equipmentCard.setAttribute('data-subject', equipment['subject']); // Add subject to the data-subject attribute
+
         const img = equipmentCard.querySelector('img');
         setEquipmentImage(img, equipment['image']);
-      
+
         equipmentCard.querySelector('.equipment-name').textContent = equipment['name'];
         equipmentCard.querySelector('.equipment-specification').textContent = equipment['specification'] ? `(${equipment['specification']})` : '';
         equipmentCard.querySelector('.equipment-description').textContent = equipment['description'] || '';
-      
+
         const btnBorrow = equipmentCard.querySelector('.btn-borrow');
         btnBorrow.addEventListener('click', () => {
-          // Prevent adding duplicate item
-          if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
-            blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
-            return;
-          }
-        
-          // Clone row template
-          const newRow = rowTemplate.cloneNode(true);
-          newRow.removeAttribute('id');
-          newRow.classList.remove('hidden');
-          newRow.classList.add('borrowing-list-row');
-          newRow.setAttribute('data-id', equipment['id']);
-        
-          // Fill equipment details
-          newRow.querySelector('.equipment-image').src = img.src;
-          newRow.querySelector('.equipment-name').textContent = equipment['name'];
-          newRow.querySelector('.equipment-specification').textContent = equipment['specification'] || '';
-          newRow.querySelector('.equipment-description').textContent = equipment['description'] || '';
-          newRow.querySelector('.equipment-qty span:last-child').textContent = equipment['quantity'] ?? '0';
-        
-          // Initialize spinbox (quantity selector)
-          const spinbox = newRow.querySelector('.spinbox');
-          new Spinbox(spinbox);
-          const input = spinbox.querySelector('.spinbox-input');
-          input.setAttribute('max', equipment['quantity'] ?? '999');
-        
-          // Setup delete button
-          const btnDelete = newRow.querySelector('button.delete');
-          btnDelete.addEventListener('click', () => {
-            const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
-            if (index > -1) borrowingList.splice(index, 1);
-            newRow.remove();
-            updateBorrowingBadge(borrowingList.length);
-          });
-        
-          // Append to table body
-          tableBody.appendChild(newRow);
-        
-          // Add to borrowing list (for internal tracking)
-          borrowingList.push({
-            id: equipment['id'],
-            name: equipment['name'],
-            specification: equipment['specification'],
-            description: equipment['description'],
-            quantity: 1
-          });
+            // Prevent adding duplicate item
+            if (borrowingList.some(listItem => listItem['id'] === equipment['id'])) {
+                blTimeoutID = showNotification('#borrowing-list-notification', 'ITEM ALREADY ADDED', blTimeoutID);
+                return;
+            }
 
-          updateBorrowingBadge(borrowingList.length);
-        
-          // Show success notification
-          let notificationText = `ADDED ${equipment['name']}`;
-          if (equipment['specification']) notificationText += ` (${equipment['specification']})`;
-          if (equipment['description']) notificationText += `, ${equipment['description']}`;
-          blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
-        });        
+            // Clone row template
+            const newRow = rowTemplate.cloneNode(true);
+            newRow.removeAttribute('id');
+            newRow.classList.remove('hidden');
+            newRow.classList.add('borrowing-list-row');
+            newRow.setAttribute('data-id', equipment['id']);
+
+            // Fill equipment details
+            newRow.querySelector('.equipment-image').src = img.src;
+            newRow.querySelector('.equipment-name').textContent = equipment['name'];
+            newRow.querySelector('.equipment-specification').textContent = equipment['specification'] || '';
+            newRow.querySelector('.equipment-description').textContent = equipment['description'] || '';
+            newRow.querySelector('.equipment-qty span:last-child').textContent = equipment['quantity'] ?? '0';
+
+            // Initialize spinbox (quantity selector)
+            const spinbox = newRow.querySelector('.spinbox');
+            new Spinbox(spinbox);
+            const input = spinbox.querySelector('.spinbox-input');
+            input.setAttribute('max', equipment['quantity'] ?? '999');
+
+            // Setup delete button
+            const btnDelete = newRow.querySelector('button.delete');
+            btnDelete.addEventListener('click', () => {
+                const index = borrowingList.findIndex(listItem => listItem['id'] === equipment['id']);
+                if (index > -1) borrowingList.splice(index, 1);
+                newRow.remove();
+                updateBorrowingBadge(borrowingList.length);
+            });
+
+            // Append to table body
+            tableBody.appendChild(newRow);
+
+            // Add to borrowing list (for internal tracking)
+            borrowingList.push({
+                id: equipment['id'],
+                name: equipment['name'],
+                specification: equipment['specification'],
+                description: equipment['description'],
+                quantity: 1
+            });
+
+            updateBorrowingBadge(borrowingList.length);
+
+            // Show success notification
+            let notificationText = `ADDED ${equipment['name']}`;
+            if (equipment['specification']) notificationText += ` (${equipment['specification']})`;
+            if (equipment['description']) notificationText += `, ${equipment['description']}`;
+            blTimeoutID = showNotification('#borrowing-list-notification', notificationText, blTimeoutID);
+        });
 
         // Set the available quantity
         const qtyParagraph = equipmentCard.querySelector('.equipment-qty');
         const qtySpans = qtyParagraph.querySelectorAll('span');
-        
+
         if (equipment['quantity'] > 0) {
-          qtyParagraph.classList.remove('hidden'); // Make sure it's visible
-          qtySpans[1].textContent = equipment['quantity'];
-          btnBorrow.disabled = false;
-          btnBorrow.textContent = 'Borrow';
-          btnBorrow.classList.remove('disabled');
+            qtyParagraph.classList.remove('hidden'); // Make sure it's visible
+            qtySpans[1].textContent = equipment['quantity'];
+            btnBorrow.disabled = false;
+            btnBorrow.textContent = 'Borrow';
+            btnBorrow.classList.remove('disabled');
         } else {
-          qtyParagraph.classList.add('hidden'); // Hide "Available: 0"
-          btnBorrow.disabled = true;
-          btnBorrow.textContent = 'Unavailable';
-          btnBorrow.classList.add('disabled');
-        }        
-      
+            qtyParagraph.classList.add('hidden'); // Hide "Available: 0"
+            btnBorrow.disabled = true;
+            btnBorrow.textContent = 'Unavailable';
+            btnBorrow.classList.add('disabled');
+        }
+
         equipmentContainer.appendChild(cardClone);
-      });      
-  
+    });
+
     applyFilters();
-}  
+}
+
+// Populate the category and subject filters
+function populateFilters(categories, subjects) {
+    const categoryFilter = document.querySelector('#filter-category');
+    const subjectFilter = document.querySelector('#filter-subject');
+
+    // Populate category filter
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category.name;
+        option.textContent = category.name;
+        categoryFilter.appendChild(option);
+    });
+
+    // Populate subject filter
+    subjects.forEach(subject => {
+        const option = document.createElement('option');
+        option.value = subject.name;
+        option.textContent = subject.name;
+        subjectFilter.appendChild(option);
+    });
+}
 
 function applyFilters() {
-    // Search and Category Filter
+    // Search, Category, and Subject Filters
     const searchInput = document.querySelector('#search-input');
     const categoryFilter = document.querySelector('#filter-category');
+    const subjectFilter = document.querySelector('#filter-subject'); // Added subject filter
     const equipmentCards = document.querySelectorAll('.equipment-card');
 
     function filterCards() {
         const searchText = searchInput.value.toLowerCase();
         const selectedCategory = categoryFilter.value;
+        const selectedSubject = subjectFilter.value; // Get selected subject
 
         equipmentCards.forEach((card) => {
-            const cardName = card.querySelector('h3').textContent.toLowerCase();
+            const cardName = card.querySelector('.equipment-name').textContent.toLowerCase();
             const cardCategory = card.getAttribute('data-category');
-            const cardSpecification = card.querySelector('#equipment-details .equipment-specification').textContent.toLowerCase();
-            const cardDescription = card.querySelector('#equipment-details .equipment-description').textContent.toLowerCase();
+            const cardSubject = card.getAttribute('data-subject'); // Added subject data attribute
+            const cardSpecification = card.querySelector('.equipment-specification') ? card.querySelector('.equipment-specification').textContent.toLowerCase() : '';
+            const cardDescription = card.querySelector('.equipment-description') ? card.querySelector('.equipment-description').textContent.toLowerCase() : '';
             
+            // Match the search text against the card's name, specification, or description
             const matchesSearch = 
                 cardName.includes(searchText) ||
                 cardSpecification.includes(searchText) ||
                 cardDescription.includes(searchText);
 
+            // Match the selected category and subject
             const matchesCategory = selectedCategory === "" || cardCategory === selectedCategory;
+            const matchesSubject = selectedSubject === "" || cardSubject === selectedSubject;
 
-            // Show card if it matches both filters, otherwise hide it
-            card.classList.toggle('hidden', !(matchesSearch && matchesCategory));
+            // Show card if it matches all filters, otherwise hide it
+            card.classList.toggle('hidden', !(matchesSearch && matchesCategory && matchesSubject));
         });
     }
 
     // Listen for input and change events
     searchInput.addEventListener('input', filterCards);
     categoryFilter.addEventListener('change', filterCards);
+    subjectFilter.addEventListener('change', filterCards); // Listen for subject filter change
 }
 
 function previousPage(pages, currentPageIndex) {
