@@ -53,7 +53,7 @@ function setEquipmentImage(imgElement, imageName) {
         const imageUrl = `${imgPath}${image}`; // Construct image URL
 
         // Log the generated image URL for debugging
-        console.log('Checking image URL:', imageUrl);
+        // console.log('Checking image URL:', imageUrl);
 
         const testImage = new Image();
         testImage.onload = () => {
