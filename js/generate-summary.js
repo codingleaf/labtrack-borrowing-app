@@ -26,8 +26,6 @@ export function generateSummary(borrowingList) {
     document.querySelector('#summary-designation').textContent = designation;
     document.querySelector('#summary-course').textContent = courseDetails;
     document.querySelector('#summary-subject').textContent = subject;
-    // (Optional) If you want to show Borrower ID somewhere, you can also do:
-    // document.querySelector('#summary-borrower-id').textContent = borrowerID;
 
     // Update Borrowing List Quantities
     const spinboxes = [...document.querySelectorAll('.spinbox > input')];
